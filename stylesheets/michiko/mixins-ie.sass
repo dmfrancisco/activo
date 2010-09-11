@@ -1,0 +1,19 @@
+/*
+ *  Cross-browser mixins for IE
+ *  
+ *  David Marquês Francisco
+ *  (dfrancisc[at]gmail.com)
+ *  
+ *  -------------------------------------
+ */
+
+// Mixins comuns a todos os browsers
+@import mixins.sass
+
+// Adicionar aqui hacks para Internet Explorer
+
+@mixin box-shadow($x, $y, $blur, $color)
+  // Como IE não suporta sombras, desenhar borda
+  border-style: solid
+  border-color: #c9c9c5
+  border-width: 1px
