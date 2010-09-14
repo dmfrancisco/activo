@@ -18,7 +18,7 @@
 form.formtastic hr {
   /* barra para subdividir grupos */
   height: 1px;
-  border-bottom: solid #eaeae6 1px;
+  border-bottom: solid #eaeaea 1px;
   padding-top: 10px;
   margin-bottom: 15px;
   background-color: #fff;
@@ -73,7 +73,7 @@ form.formtastic fieldset > ol > li.text textarea,
 form.formtastic fieldset > ol > li.datepicker input {
   width:100%;
   max-width:100%;
-  border: 1px solid #eaeae6;
+  border: 1px solid #eaeaea;
   padding: 2px;
 }
 
@@ -118,8 +118,8 @@ form.formtastic fieldset > ol > li.numeric input[disabled='disabled'],
 form.formtastic fieldset > ol > li.text textarea[disabled='disabled'], 
 form.formtastic fieldset > ol > li.datepicker input[disabled='disabled'] {
   /* campos que não podem ser preenchidos (disabled) */
-  background-color: #f6f6f3;
-  border: 1px solid #f6f6f3;
+  background-color: #f6f6f6;
+  border: 1px solid #f6f6f6;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
