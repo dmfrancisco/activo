@@ -1,0 +1,38 @@
+
+p. Activo was originally developed as a theme for the web-app-theme plugin. It was extended and now includes two extra stylesheets - one for formtastic and the other for attrtastic. It also has a seamless style for the jQuery DatePicker plugin. You should use only the ones you need.
+
+!http://dl.dropbox.com/u/1745359/activo/1.jpg!
+
+!http://dl.dropbox.com/u/1745359/activo/2.jpg!
+
+!http://dl.dropbox.com/u/1745359/activo/3.jpg!
+
+!http://dl.dropbox.com/u/1745359/activo/4.jpg!
+
+p. * "Web App Theme":http://github.com/pilu/web-app-theme is a Rails plugin that generates a complete web application layout.
+p. * "Formtastic":http://github.com/justinfrench/formtastic makes things easier to create HTML forms in your Rails applications.
+p. * "Attrtastic":http://github.com/MBO/attrtastic is similar in usage to formtastic and ease of displaying AR record informations. It helps creating show/index pages.
+
+
+h2. Main contents
+
+
+p. +stylesheets+
+
+* +base.css+: This is an untouched copy of the web-app-theme main stylesheet, downloaded from its "main repository":http://github.com/pilu/web-app-theme
+
+* +activo+
+** +activo.sass+: Stylesheet of the theme that should be compiled to the activo.css file.
+** +activo.css+: Compiled version of activo.sass.
+
+* +activo-attrtastic+
+** +attrtastic_changes.css+: Stylesheet of the theme for the attrtastic plugin.
+
+* +activo-formtastic+
+** +formtastic_changes.css+: Stylesheet of the theme for the formtastic plugin.
+
+
+h2.
+
+p. 2010 David Francisco, released under the MIT license.
+p.
