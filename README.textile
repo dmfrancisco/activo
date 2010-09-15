@@ -10,7 +10,9 @@ p. Activo was originally developed as a theme for the web-app-theme plugin. It w
 !http://dl.dropbox.com/u/1745359/activo/4.jpg!
 
 p. * "Web App Theme":http://github.com/pilu/web-app-theme is a Rails plugin that generates a complete web application layout.
+
 p. * "Formtastic":http://github.com/justinfrench/formtastic makes things easier to create HTML forms in your Rails applications.
+
 p. * "Attrtastic":http://github.com/MBO/attrtastic is similar in usage to formtastic and ease of displaying AR record informations. It helps creating show/index pages.
 
 
@@ -33,9 +35,3 @@ p. +stylesheets+
 
 * +activo-formtastic+
 ** +formtastic_changes.css+: Stylesheet of the theme for the formtastic plugin.
-
-
-h2.
-
-p. 2010 David Francisco, released under the MIT license.
-p.
