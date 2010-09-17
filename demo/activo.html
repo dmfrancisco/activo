@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>activo</title>
+
+  <link rel="stylesheet" href="stylesheets/jquery-ui.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="stylesheets/jquery.tipsy.css" media="screen"type="text/css" />
+  <link rel="stylesheet" id="current-theme" href="stylesheets/activo/activo.css" type="text/css" media="screen" />
+  <!--[if IE]>
+    <link href="css/activo/activo-ie.css?1284140625" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+  <link rel="stylesheet" href="stylesheets/activo-attrtastic/attrtastic_changes.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/activo-formtastic/formtastic.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/activo-formtastic/formtastic_changes.css" media="screen" type="text/css" />
+
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery-1.3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery-ui.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
+  <script type="text/javascript" charset="utf-8" src="javascripts/application.js"></script>
+  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.tipsy.js"></script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id='status'>
+        Hello! You have <a href="#">3 pending notifications</a>
+      </div>
+      <h1><a href="index.html"></a></h1>
+      <div id="user-navigation">
+        <ul class="wat-cf">
+          <li><a href="#"><img src="images/session/home.png" title="Dashboard" /></a></li>
+          <li><a href="#"><img src="images/session/account.png" title="Profile" /></a></li>
+          <li><a href="#"><img src="images/session/config.png" title="Preferences" /></a></li>
+          <li><a href="#"><img src="images/session/logout.png" title="Logout" /></a></li>
+        </ul>
+      </div>
+      <div id="main-navigation">
+        <ul class="wat-cf">
+          <li class="first"><a id="anchor" href="#block-text">Main Page</a></li>
+          <li class="active"><a id="anchor" href="#block-text">Active</a></li>
+          <li><a id="anchor" href="#block-login">Login</a></li>
+          <li><a id="anchor" href="#block-signup">Signup</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper" class="wat-cf">
+      <div id="main">
+
+        <div class="block" id="block-text">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="active first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <div id="control" class="control">
+              <a class="button" href="#">
+                 <img src="images/icons/edit.png" alt="Edit" /> Edit
+              </a>
+            </div>
+            <h2 class="title">Text</h2>
+            <div class="inner">
+              <p class="first">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div class='breadcrumb'>
+            <ul>
+              <li class='first'><a href="#">Breadcrumbs</a></li>
+              <li><a href="#">Simple</a></li>
+              <li class='active'>Example</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="block" id="block-tables">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li class="active"><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <div id="control" class="control">
+              <a class="button" href="#">
+                 <img src="images/icons/add.png" alt="Add" /> Add
+              </a>
+              <a class="button" href="#">
+                 <img src="images/icons/delete.png" alt="Remove" /> Remove
+              </a>
+            </div>
+            <h2 class="title">Tables</h2>
+            <div class="inner">
+              <form action="#" class="form">
+                <table class="table">
+                  <tr>
+                    <th class="first"><input type="checkbox" class="checkbox toggle" /></th>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th class="last">&nbsp;</th>
+                  </tr>
+                  <tr class="odd">
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>1</td><td>hulk</td><td>Hulk</td><td>Hogan</td>
+                    <td class='last'>
+                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                    </td>
+
+                  </tr>
+                  <tr class="even">
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
+                    <td class='last'>
+                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>3</td><td>andre</td><td>Andre</td><td>The Giant</td>
+                    <td class='last'>
+                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                    </td>
+                  </tr>
+                  <tr class="even">
+                    <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>4</td><td>machoman</td><td>Macho Man</td><td>Randy Savage</td>
+                    <td class='last'>
+                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="pagination">
+                  <span class="disabled prev_page">« Previous</span><span class="current">1</span><a rel="next" href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a rel="next" class="next_page" href="#">Next »</a>
+                </div>
+              </form>
+
+              <form action="#" class="search">
+                <div class='columns wat-cf'>
+                  <div class='column right'>
+                    <input class="search_submit" name="commit" type="submit" value="" />
+                    <input class="search_box" id="search" name="search" onblur="if (!value) { value = 'Search' }" onfocus="if (value == 'Search') { value = '' }" type="text" value="Search" />
+                  </div>
+                </div>
+              </form>
+              <div class='wat-cf'></div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class='block' id="block-innernav">
+          <div class='secondary-navigation'>
+            <ul class='wat-cf'>
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li class="active"><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class='content'>
+            <h2 class='title'>
+              Cicero
+            </h2>
+            <div id='control' style='margin-top:-7px; margin-right:8px;'>
+              <a href="#" class="button"><img alt="Export" src="images/icons/pdf.png" /> Export list</a>
+            </div>
+            <div class='inner'>
+              <h3 class='title'>
+                Finibus
+              </h3>
+              <table class='table' style='margin-bottom: 0px;'>
+                <tr>
+                  <th>Reference</th>
+                  <th>Param 1</th>
+                  <th>Param 2</th>
+                  <th>Param 3</th>
+                  <th>Param 4</th>
+                  <th>Param 5</th>
+                  <th>Param 6</th>
+                  <th>Time</th>
+                  <th class='last' style='width:40px;'></th>
+                </tr>
+                <tr class='even'>
+                  <td><a href="#tempore" id="anchor">Tempore</a></td>
+                  <td>21</td>
+                  <td>21</td>
+                  <td>0</td>
+                  <td>6</td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>-</td>
+                  <td class='last'>
+                    <a href="#tempore" id="anchor"><img onmouseout="this.src='images/icons/24/anchor.png'" onmouseover="this.src='images/icons/24/anchor-hover.png'" src="images/icons/24/anchor.png" title="Malorum" /></a>
+                  </td>
+                </tr>
+                <tr class='odd'>
+                  <td><a href="#tempore" id="anchor">Soluta</a></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>-</td>
+                  <td class='last'>
+                    <a href="#tempore" id="anchor"><img onmouseout="this.src='images/icons/24/anchor.png'" onmouseover="this.src='images/icons/24/anchor-hover.png'" src="images/icons/24/anchor.png" title="Malorum" /></a>
+                  </td>
+                </tr>
+                <tr class='even'>
+                  <td style='font-style: italic;'>Total</td>
+                  <td>21</td>
+                  <td>21</td>
+                  <td>0</td>
+                  <td>6</td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>-</td>
+                  <td class='last'></td>
+                </tr>
+              </table>
+            </div>
+            <div id='control' style='margin-top:2px; margin-right:8px;'>
+              <a href="#" class="button"><img src="images/icons/add.png" /> Add item</a>
+              <a href="#" class="button"><img src="images/icons/send-mail.png" /> Send email</a>
+            </div>
+            <div class='inner'>
+              <h3 class='title'>
+                Bonorum
+              </h3>
+              <div class='block-norounded'>
+                <div id='mask'>
+                  <div class='secondary-inner-nav'>
+                    <ul class='wat-cf'>
+                      <li class='first active'><a href="#">Neque</a></li>
+                      <li><a href="#">Quisquam</a></li>
+                      <li><a href="#">Dolorem</a></li>
+                      <li><a href="#">Ipsum</a></li>
+                      <li><a href="#">Dolor</a></li>
+                      <li><a href="#">Consectetur</a></li>
+                    </ul>
+                  </div>
+                  <div class='inner'>
+                    <h4 class='title' id='tempore'>
+                      Malorum
+                    </h4>
+                    <table class='table'>
+                      <tr>
+                        <td>There is no spoon</td>
+                      </tr>
+                    </table>
+
+                    <div class='wat-cf'></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='breadcrumb'>
+            <ul>
+              <li class='first'><a href="#">Lorem</a></li>
+              <li><a href="#">Ipsum</a></li>
+              <li><a href="#">Dolor</a></li>
+              <li><a href="#">Sit</a></li>
+              <li><a href="#">Ammet</a></li>
+              <li class='active'>Consectetur</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block" id="block-forms">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li class="active"><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <div id="control" class="control">
+              <a class="button" href="#">
+                 <img src="images/icons/show.png" alt="Ver" /> Show
+              </a>
+            </div>
+            <h2 class="title">Forms</h2>
+            <div class="inner">
+              <form action="#" method="get" class="form">
+                <div class="group">
+                  <label class="label">Text field</label>
+                  <input type="text" class="text_field" />
+                  <span class="description">Ex: a simple text</span>
+                </div>
+                <div class="group">
+                  <div class="fieldWithErrors">
+                    <label class="label" for="post_title">Title</label>
+                    <span class="error">can't be blank</span>
+                  </div>
+                  <input type="text" class="text_field" />
+                </div>
+                <div class="group">
+                  <label class="label">Text area</label>
+                  <textarea class="text_area" rows="10" cols="80"></textarea>
+                  <span class="description">Write here a long text</span>
+                </div>
+                <div class="group navform wat-cf">
+                  <button class="button" type="submit">
+                    <img src="images/icons/tick.png" alt="Save" /> Save
+                  </button>
+                  <a href="#header" class="button">
+                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="block-messages">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li class="active"><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h2 class="title">Messages</h2>
+            <div class="inner">
+              <div class="flash">
+                <div class="message error">
+                  <p>Error message</p>
+                </div>
+                <div class="message warning">
+                  <p>Warning message</p>
+                </div>
+                <div class="message notice">
+                  <p>Notice message</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="block-forms-2">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li class="active"><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h2 class="title">2 Cols Forms</h2>
+            <div class="inner">
+              <form action="#" method="get" class="form">
+                <div class="columns wat-cf">
+                  <div class="column left">
+                    <div class="group">
+                      <label class="label">Text field</label>
+                      <input type="text" class="text_field" />
+                    </div>
+                    <div class="group">
+                      <label class="label">Text area</label>
+                      <textarea class="text_area" rows="10" cols="80"></textarea>
+                    </div>
+                  </div>
+                  <div class="column right">
+                    <div class="group">
+                      <label class="label">Select</label>
+                      <select><option value="1">Choose...</option></select>
+                    </div>
+                    <div class="group">
+                      <label class="label">Check box</label>
+                      <div>
+                        <input type="checkbox" name="checkbox" id="checkbox_1" class="checkbox" value="1" /> <label for="checkbox_1" class="checkbox">Option 1</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="checkbox" id="checkbox_2" class="checkbox" value="2" /> <label for="checkbox_2" class="checkbox">Option 2</label>
+                      </div>
+                    </div>
+                    <div class="group">
+                      <label class="label">Radio</label>
+                      <div>
+                        <input type="radio" name="radio" id="radio_1" class="checkbox" value="1" /> <label for="radio_1" class="radio">Option 1</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="radio" id="radio_2" class="checkbox" value="2" /> <label for="radio_2" class="radio">Option 2</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group navform wat-cf">
+                  <button class="button" type="submit">
+                    <img src="images/icons/tick.png" alt="Save" /> Save
+                  </button>
+                  <a href="#header" class="button">
+                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class='block' id='block-attrtastic'>
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li class="active"><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class='content'>
+            <div class='control' id='control'>
+              <a class="button" href="#" id="more_link" onclick="try {
+                jQuery(&quot;#details&quot;).toggle();
+                jQuery(&quot;#less_link&quot;).show();
+                jQuery(&quot;#more_link&quot;).hide();
+              } catch (e) { alert('RJS error'); throw e }; return false;">
+              <img alt="See-more" src="images/icons/see-more.png" /> Show more</a>
+              <a class="button" href="#" id="less_link" onclick="try {
+                jQuery(&quot;#details&quot;).toggle();
+                jQuery(&quot;#less_link&quot;).hide();
+                jQuery(&quot;#more_link&quot;).show();
+              } catch (e) { alert('RJS error'); throw e }; return false;" style="display:none;">
+              <img alt="See-less" src="images/icons/see-less.png" /> Show less</a>
+
+              <a href="#" class="button"><img src="images/icons/pdf.png" /> Export</a>
+              <a href="#" class="button"><img src="images/icons/application_edit.png" /> Edit</a>
+            </div>
+            <h2 class='title'>
+              <a href="http://github.com/MBO/attrtastic">Attrtastic</a> integration
+            </h2>
+            <div class='inner'>
+              <div class="attrtastic example">
+                <div class='column_left'>
+                  <div class="attributes">
+                    <ol>
+                      <li class="attribute"><span class="label">Dolor</span><span class="value">Sit amet</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class='column_right'>
+                  <div class="attributes">
+                    <ol>
+                      <li class="attribute"><span class="label">Consectetur</span><span class="value">528491</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="attributes">
+                  <ol>
+                    <li class="attribute"><span class="label">Adipisicing elit</span><span class="value">Aliquip</span></li>
+                  </ol>
+                </div>
+                <div class='column_left'>
+                  <div class="attributes">
+                    <ol>
+                      <li class="attribute"><span class="label">Incididunt</span><span class="value">Officia</span></li>
+                      <li class="attribute"><span class="label">Labore</span><span class="value">Ut enim ad minim veniam</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class='column_right'>
+                  <div class="attributes">
+                    <ol>
+                      <li class="attribute"><span class="label">Eiusmod Tempor</span><span class="value">4 8 15 16 23 42</span></li>
+                      <li class="attribute"><span class="label">Laboris nisi</span><span class="value"></span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="attributes">
+                  <ol>
+                    <li class="attribute"><span class="label">Pariatur</span><span class="value">Excepteur sint occaecat cupidatat non proident</span></li>
+                  </ol>
+                </div>
+                <div id='details' style='display: none'>
+                  <div class="attributes">
+                    <ol><hr /></ol>
+                  </div>
+                  <div class='column_left'>
+                    <div class="attributes">
+                      <ol>
+                        <li class="attribute"><span class="label">Sunt in culpa</span><span class="value">Irure dolor</span></li>
+                        <li class="attribute"><span class="label">Deserunt mollit</span><span class="value">Fugiat nulla</span></li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class='column_right'>
+                    <div class="attributes">
+                      <ol>
+                        <li class="attribute"><span class="label">Laborum</span><span class="value">Voluptate</span></li>
+                        <li class="attribute"><span class="label">Consequat</span><span class="value">Velit</span></li>
+                        <li class="attribute"><span class="label">Reprehenderit</span><span class="value">Cillum dolore</span></li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='wat-cf'></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class='block' id='block-formtastic'>
+          <div class='secondary-navigation'>
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li class="active"><a href="#block-formtastic">Formtastic</a></li>
+              <li><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class='content'>
+            <h2 class='title'>
+              <a href="http://github.com/justinfrench/formtastic">Formtastic</a>
+                <div class='highlighted-title-info-grey'>with date picker</div>
+            </h2>
+            <div class='inner'>
+              <form action="#" class="formtastic example" method="post">
+                <fieldset class="column_left">
+                  <ol>
+                    <li class="string required" id="example_name_input"><label for="example_name">Lorem ipsum *</label>
+                    <input id="example_name" maxlength="255" name="example[name]" size="50" type="text" value="His senserit voluptatum ut" />
+                    <p class="inline-hints">
+                      Usu ei nonummy consetetur sadipscing
+                    </p>
+                    </li>
+                  </ol>
+                </fieldset>
+                <fieldset class="column_right">
+                  <ol>
+                    <li class="string required" id="example_homero_input"><label for="example_homero">Homero *</label><input id="example_homero" maxlength="255" name="example[homero]" size="50" type="text" value="12345" /></li>
+                  </ol>
+                </fieldset>
+                <fieldset class="inputs">
+                </fieldset>
+                <fieldset class="inputs">
+                  <ol>
+                    <li class="text optional" id="example_fastidii_input"><label for="example_fastidii">Fastidii</label><textarea cols="50" id="example_fastidii" name="example[fastidii]" rows="3"></textarea></li>
+                  </ol>
+                </fieldset>
+                <fieldset class="column_left">
+                  <ol>
+                    <li class="string optional" id="example_repudiare_input"><label for="example_repudiare">Melius repudiare</label><input id="example_repudiare" maxlength="255" name="example[repudiare]" size="50" type="text" value="" /></li>
+                    <li class="datepicker optional" id="example_epicurei_input"><label for="example_epicurei">Movet epicurei</label><input class="ui-datepicker" id="example_epicurei" name="example[epicurei]" size="50" type="text" /></li>
+                  </ol>
+                </fieldset>
+                <fieldset class="column_right">
+                  <ol>
+                    <li class="string optional" id="example_mandamus_input"><label for="example_mandamus">Mandamus</label><input id="example_mandamus" maxlength="255" name="example[mandamus]" size="50" type="text" value="" /></li>
+                    <li class="datepicker optional" id="example_consectetuer_input"><label for="example_consectetuer">Consectetuer</label><input class="ui-datepicker" id="example_consectetuer" name="example[consectetuer]" size="50" type="text" /></li>
+                  </ol>
+                </fieldset>
+                <fieldset class="inputs">
+                  <ol>
+                    <hr />
+                  </ol>
+                </fieldset>
+                <fieldset class="inputs">
+                  <ol>
+                    <li class="radio optional" id="example_state_input">
+                    <fieldset>
+                      <legend class="label"><label for="example_state">State</label></legend>
+                      <ol>
+                        <li><label><input checked="checked" name="example[state]" type="radio" value="0" /> Theophrastus</label></li>
+                        <li><label><input name="example[state]" type="radio" value="1" /> Posidonium</label></li>
+                        <li><label><input name="example[state]" type="radio" value="2" /> Copiosae</label></li>
+                      </ol>
+                    </fieldset>
+                    </li>
+                  </ol>
+                </fieldset>
+                <div class="group navform wat-cf">
+                  <button class="button" type="submit">
+                    <img src="images/icons/tick.png" alt="Save" /> Save
+                  </button>
+                  <a href="#header" class="button">
+                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="block" id="block-lists">
+          <div class="secondary-navigation">
+            <ul class="wat-cf">
+              <li class="first"><a href="#block-text">Text</a></li>
+              <li><a href="#block-tables">Tables</a></li>
+              <li><a href="#block-innernav">Sub-nav</a></li>
+              <li><a href="#block-forms">Forms</a></li>
+              <li><a href="#block-messages">Messages</a></li>
+              <li><a href="#block-forms-2">2 Cols Forms</a></li>
+              <li><a href="#block-attrtastic">Attrtastic</a></li>
+              <li><a href="#block-formtastic">Formtastic</a></li>
+              <li class="active"><a href="#block-lists">Lists</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h2 class="title">Lists</h2>
+            <div class="inner">
+              <ul class="list">
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                  </div>
+                  <div class="item">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <p>Copyright &copy; 2010 Your Site.</p>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="block">
+          <ul class="navigation">
+            <li><a id="anchor" href="#block-text">Text</a></li>
+            <li><a id="anchor" href="#block-tables">Tables</a></li>
+            <li><a id="anchor" href="#block-innernav">Sub-nav</a></li>
+            <li><a id="anchor" href="#block-forms">Forms</a></li>
+            <li><a id="anchor" href="#block-messages">Messages</a></li>
+            <li><a id="anchor" href="#block-forms-2">2 Cols Forms</a></li>
+            <li><a id="anchor" href="#block-attrtastic">Attrtastic</a></li>
+            <li><a id="anchor" href="#block-formtastic">Formtastic</a></li>
+            <li><a id="anchor" href="#block-lists">Lists</a></li>
+          </ul>
+        </div>
+        <div class="block notice">
+          <h4>Notice Title</h4>
+          <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
+        </div>
+        <div class="block warning">
+          <h4>Warning</h4>
+          <p>Curabitur ultrices, lorem ac aliquam blandit. Aenean tempor venenatis dolor!</p>
+        </div>
+        <div class="block">
+          <div class="sidebar-block">
+            <h4>Sidebar Inner block Title</h4>
+            <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac <a href="#">aliquam blandit</a>, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="box">
+      <h1>Web App Theme</h1>
+      <div class="block" id="block-login">
+        <h2>Login Box</h2>
+        <div class="content login">
+          <div class="flash">
+            <div class="message error">
+              <p>Invalid email or password</p>
+            </div>
+          </div>
+          <form action="#" class="form login">
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label right">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text_field" value="dmfrancisc@gmail.com" />
+              </div>
+            </div>
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label right">Password</label>
+              </div>
+              <div class="right">
+                <input type="password" class="text_field" value="segredo" />
+              </div>
+            </div>
+            <div class="group navform wat-cf">
+              <div class="right">
+                <button class="button" type="submit">
+                  <img src="images/icons/key.png" alt="Save" /> Login
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="block" id="block-signup">
+        <h2>Sign up</h2>
+        <div class='secondary-inner-nav'>
+          <ul class='wat-cf'>
+            <li class='active'><a href="#">Lorem</a></li>
+            <li><a href="#">Ipsum</a></li>
+            <li><a href="#">Dolor</a></li>
+            <li><a href="#">Sit</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <form action="#" class="form">
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label">Login</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text_field" />
+                <span class="description">Ex: web-app-theme</span>
+              </div>
+            </div>
+            <div class="group wat-cf">
+              <div class="left">
+                <label class="label">Email</label>
+              </div>
+              <div class="right">
+                <input type="text" class="text_field" />
+                <span class="description">Ex: test@example.com</span>
+              </div>
+            </div>
+
+            <div class="group">
+              <label class="label">Password</label>
+              <input type="password" class="text_field" />
+                <span class="description">Must contains the word 'yeah'</span>
+            </div>
+            <div class="group">
+              <label class="label">Password confirmation</label>
+              <input type="password" class="text_field" />
+            </div>
+            <div class="group navform wat-cf">
+              <button class="button" type="submit">
+                <img src="images/icons/tick.png" alt="Save" /> Signup
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

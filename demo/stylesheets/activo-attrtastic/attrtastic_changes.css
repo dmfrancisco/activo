@@ -1,0 +1,72 @@
+/*
+    Stylesheet for attrtastic
+
+    David Marquês Francisco
+    (dfrancisc[at]gmail.com)
+
+    -------------------------------------
+*/
+
+.attrtastic .attributes > ol {
+  /* evitar a numeração da listagem */
+  list-style: none;
+}
+
+.attrtastic .attributes > ol > li.attribute {
+  /* espaçamento entre linhas */
+  margin-bottom: 10px;
+  line-height: 18px;
+  margin-right: -6px; /* FIXME */
+}
+
+.attrtastic .attributes > ol > li.attribute .label {
+  /* label do atributo */
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #666666;
+  /* para ficar por cima do campo */
+  width:100%;
+  display: block;
+  font-size: 14px;
+}
+
+.attrtastic .attributes > ol > li.attribute .value {
+  /* valor do atributo */
+  background-color: #f6f6f6;
+  padding: 2px;
+  padding-left: 4px;
+  display: block;
+  min-height: 18px;
+  font-size: 13px;
+}
+
+.attrtastic hr {
+  /* barra para subdividir grupos */
+  height: 1px;
+  border-bottom: solid #e8e8e8 1px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+
+/* COLUNAS */
+
+.attrtastic .attributes > ol  {
+  /* uma só coluna */
+  float:left;
+  width:100%;
+}
+
+.attrtastic .column_left {
+  /* duas colunas - esquerda */
+  float:left;
+  width:47%;
+  margin-left: 0px;
+}
+
+.attrtastic .column_right {
+  /* duas colunas - direita */
+  float:right;
+  width:48%;
+  margin-right: 0px;
+}

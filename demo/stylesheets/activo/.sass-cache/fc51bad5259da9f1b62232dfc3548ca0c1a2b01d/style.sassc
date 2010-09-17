@@ -1,0 +1,1056 @@
+3.0.15 (Classy Cassidy)
+a66ea81f191ebd31e451fac9a8b1587903ebabbc
+o:Sass::Tree::RootNode	:@template"˘1/*
+ *    David Marqu√™s Francisco
+ *    (dfrancisc[at]gmail.com)
+ *
+ *    Originally based on the theme "Drastic
+ *    Dark" by Juan Maria Martinez Arce
+ *    (juan[at]insignia4u.com)
+ *
+ *    Added components that doesn't exist in
+ *    other web-app-theme themes
+ *    -----------------------------------------
+ *
+ *    #full-main (ocupa os 100% de width para
+ *      p√°ginas que n√£o t√™m barra lateral)
+ *    .flash .error-list
+ *    #sidebar .warning
+ *    .breadcrumb
+ *    .searchform
+ *    a.global_button (n√£o est√° a ser utilizado
+ *      mas pode ser √∫til. S√£o bot√µes que ficam
+ *      na barra de separadores)
+ *    .block-norounded (blocos sem as pontas
+ *      arredondadas)
+ *    .secondary-inner-nav (navega√ß√£o sem as
+ *      pontas arredondadas para blocos
+ *      interiores)
+ *    div.tooltip (reimplementa o aspecto das
+ *      tooltips que mostram o 'title' das
+ *      imagens)
+ *    .highlighted-title-info (informa√ß√£o
+ *      adicional para t√≠tulos)
+ *
+ *                                           */
+
+
+/////////////////// COLORS ////////////////////
+
+$light_grey:           #f4f4f4
+$not_so_light_grey:    #e6e6e0
+$grey:                 #a5a594
+$dark_grey:            #818171
+$black:                #261f1f
+$black_text:           #111111
+$red:                  #cc0000
+$light_blue:           #e6eefc
+$interactive_yellow:   #ffff88
+$yellow:               #ffee79
+
+
+///////////////////////////////////////////////
+
+body
+  color: $black_text
+  background: $light_grey
+  font-family: helvetica, arial, sans-serif
+
+h1, h2, h3
+  color: $black_text
+
+a:link, a:visited, a:hover, a:active
+  color: $black_text
+
+a
+  -moz-outline: none
+
+hr
+  background: $light_grey
+  color: $light_grey
+
+// HEADER
+
+#header
+  background-color: $black
+  background-image: url('../../images/logo.png')
+  background-repeat: no-repeat
+  background-position: 20px 20px
+
+  h1
+    padding: 15px 55px
+    font-size: 40px
+    font-style: normal
+    text-transform: normal
+    letter-spacing: -1px
+    line-height: 1.2em
+    color: #fff
+    @include text-shadow(#000, 1px, 1px, 2)
+    height: 50px
+
+    a:link, a:active, a:hover, a:visited
+      color: #fff
+
+
+// MAIN AREA
+
+#main
+  // se for para utilizar a sidebar
+  width: 77%
+  float: left
+
+  .block
+    // caixa de texto principal
+    padding-top: 0px
+    background: #fff
+    @include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.4))
+    @include rounded-corners(9px)
+
+    .content
+      padding-top: 1px
+      .inner
+        padding: 0 15px 15px
+      h2
+        margin-left: 15px
+        font-size: 22px
+        font-style: normal
+        font-weight: bold
+        text-transform: normal
+        letter-spacing: -1px
+        line-height: 1.2em
+      p
+        font-size: 13px
+        font-style: normal
+        font-weight: normal
+        text-transform: normal
+        letter-spacing: normal
+        line-height: 1.45em
+
+  .block-norounded
+    // vers√£o sem cantos arredondados
+    @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3))
+
+#full-main
+  // igual a 'main' mas ocupa toda a largura (sem sidebar)
+  @extend #main
+  width: 100%
+  .block
+    margin-bottom: 20px
+
+
+// MAIN NAVIGATION
+
+#main-navigation
+  // barra de menus do topo
+  ul
+    li
+      float: left
+      padding-left: 15px
+      padding-right: 5px
+      margin-right: 0
+
+      a:link, a:visited, a:hover, a:active
+        padding: 8px 0
+        text-decoration: none
+        color: $black_text
+
+      &.active
+        a:link, a:visited, a:hover, a:active
+          color: $grey
+
+  background-color: $light_grey
+  background-image: url('../../images/menubar-background.png')
+  background-repeat: repeat-x
+
+  @include rounded-corner(top, left, 9px)
+  @include rounded-corner(top, right, 9px)
+
+
+// TOP NAVIGATION
+
+.secondary-navigation
+  background-color: #f2f1ee
+  background-image: url('../../images/boxbar-background.png')
+  border-bottom-width: 0px
+  @include rounded-corner(top, left, 9px)
+  @include rounded-corner(top, right, 9px)
+
+  li.first a, ul li.first
+    @include rounded-corner(top, left, 9px)
+
+  ul li a
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+      color: $black_text
+
+  ul li.text
+    padding: 10px 15px
+    color: #818171
+
+  ul li.active
+    background-color: #fff
+    a:hover
+      background-color: #fff
+
+
+// USER NAVIGATION
+
+#user-navigation
+  top: auto
+  right: 25px
+
+#user-navigation ul li a
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+    color: $black_text
+
+#user-navigation ul li, .secondary-navigation ul li
+  float: left
+
+
+// SECONDARY INNER NAV
+
+.secondary-inner-nav
+  background-color: #f0eff0
+  background-image: url('../../images/boxbar-background.png')
+  font-size: 13px
+
+  border-bottom-color: #fff
+  border-bottom-width: 10px
+  border-bottom-style: solid
+
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+    li
+      float: left
+      &.active
+        background-color: #fff
+        a:hover
+          background-color: #fff
+      a
+        display: block
+        padding: 10px 15px
+        &:link, &:visited, &:hover, &:active
+          text-decoration: none
+          color: $black
+
+
+// WELCOME MESSAGE
+
+#status
+  margin-top: 20px
+  padding: 15px
+  float: right
+  color: white
+  font-size: 16px
+  @include text-shadow(#000, 1px, 1px, 2)
+
+#status a
+  color: white
+
+
+// FOOTER
+
+#footer
+  .block
+    color: #fff
+    background: $black
+    @include rounded-corners(9px)
+  p
+    margin: 0
+    padding: 0
+    text-align: center
+    color: #bbbbb7
+
+
+// SIDEBAR
+
+#sidebar
+  width: 20%
+  float: right
+
+  .block
+    // caixas da barra lateral
+    padding-top: 2px
+    padding-bottom: 2px
+    @include rounded-corners(9px)
+    h4
+      // t√≠tulos das caixas de texto da barra lateral
+      font-weight: bold
+
+  .notice
+    // caixas de aviso da barra lateral
+    background: #fff
+    @include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.4))
+
+  .warning
+    // caixas de aviso da barra lateral
+    background: $yellow
+    @include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.4))
+    padding: 10px
+
+  h3
+    // t√≠tulo da sidebar
+    padding-left: 25px
+    color: $black_text
+    border-bottom: 1px solid $black
+
+  ul li
+    // lista da barra lateral
+    background-position: 0 11px
+    background-repeat: no-repeat
+    background-image: url('../../images/arrow.png')
+    border-bottom: 1px solid $not_so_light_grey
+    list-style-type: none
+    // elementos da lista
+    a
+      margin-left: 10px
+      text-decoration: none
+    // elemento seleccionado
+    &.active a
+      color: $grey
+
+
+// BREADCRUMB
+
+.breadcrumb
+  background-color: #e6e6e0
+  @include rounded-corner(bottom, left, 9px)
+  @include rounded-corner(bottom, right, 9px)
+
+  ul
+    height: 20px
+    padding-bottom: 15px
+    padding-top: 0px
+    list-style-type: none
+
+    li
+      color: #777
+      display: block
+      padding-top: 10px
+      padding-left: 17px // dist√¢ncia √† imagem
+      margin-right: 15px // espa√ßamento entre os elementos
+      background: url('../../images/breadcrumb.png') no-repeat 0px 12px
+      float: left
+
+      a
+        text-decoration: none
+        color: #777
+      &.first
+        padding-left: 15px
+        background: none
+      &.active
+        color: $grey
+
+
+// CONTROLS
+
+#control
+  float: right
+  margin-right: 9px
+  margin-top: 11px
+
+
+// PAGINATION
+
+.pagination
+  a, span
+    border: 1px solid #c3c4ba
+    @include rounded-corners(2px)
+    margin-right: 5px
+    padding: 6px
+    min-width: 15px
+    text-align: center
+    background: $light_grey
+    background-image: url('../../images/button-background.png')
+    color: $black_text
+
+  a:hover
+    border: 1px solid $dark_grey
+    @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3))
+
+  span.current
+    background: $black
+    color: #fff
+    border: 1px solid $black
+
+.pagination a:active
+  // quando se clica
+  background-image: url('../../images/button-background-active.png')
+  outline: none /* hide dotted outline in Firefox */
+
+
+// TABLES
+
+.table
+  th
+    background: #ebebe3
+    color: #222
+    font-weight: normal
+    &.last
+      width: 80px
+  td
+    border-bottom: 1px solid #ebebe3
+    &.last
+      // coluna em que aparecem os √≠cones (maiores que o texto)
+      padding-top: 0px
+      padding-bottom: 0px
+  tr.even
+    background: #f8f8f4
+
+
+// FORMS
+
+.form
+  label.label
+    color: #666
+
+  input.text_field, textarea.text_area
+    width: 100%
+    border: 1px solid $light_grey
+
+  input.button
+    background: $light_grey
+    @include rounded-corners(5px)
+    border: 1px solid #c1c1c1
+    padding: 2px 5px
+    cursor: pointer
+    color: $black_text
+    font-weight: bold
+    font-size: 11px
+    &:hover
+      border: 1px solid #666
+
+  .description
+    font-style: italic
+    color: #8c8c8c
+    font-size: .9em
+
+  .navform a
+    color: $red
+
+
+// SEARCH
+
+.search
+  border: 1px solid #c1c1c1
+  @include rounded-corners(2px)
+  padding: 0px
+  margin: 0px
+  position: relative
+  float: right
+  width: 300px
+  height: 25px
+  &:hover
+    border: 1px solid #a2a294
+    @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3))
+  form
+    display: inline
+
+.search_box
+  font-family: helvetica, arial, sans-serif
+  font-size: 13px
+  border: 0px
+  border-right: 1px solid #c1c1c1
+  background-color: white
+  position: absolute
+  left: 0px
+  width: 266px
+  height: 25px
+  padding-left: 6px
+
+.search_submit
+  border: 0px
+  background: url('../../images/search-button.png') no-repeat
+  position: absolute
+  left: 273px
+  height: 25px
+  width: 27px
+  cursor: pointer
+
+
+// FLASH-MESSAGES
+
+.flash
+  .message
+    @include rounded-corners(6px)
+    text-align: center
+    margin: 0 auto 15px
+    p
+      margin: 8px
+
+  .error, .error-list
+    border: 1px solid #fbb
+    background-color: #fdd
+
+  .warning
+    border: 1px solid $interactive_yellow
+    background-color: #ffffcc
+
+  .notice
+    border: 1px solid #1fdf00
+    background-color: #bbffb6
+
+  .error-list
+    text-align: left
+    h2
+      font-size: 16px
+      text-align: center
+    ul
+      padding-left: 22px
+      line-height: 18px
+      list-style-type: square
+      margin-bottom: 15px
+
+
+// LISTS
+
+ul.list li
+  border-bottom-color: $light_grey
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  @include rounded-corners(9px)
+
+  .item .avatar
+    border-color: $light_grey
+    border-width: 1px
+    border-style: solid
+    padding: 2px
+
+
+// BOX
+
+#box
+  width: 480px
+
+  .block
+    background: #fff
+    @include box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.4))
+    @include rounded-corners(9px)
+    h2
+      background: $black
+      color: #fff
+      @include rounded-corner(top, left, 9px)
+      @include rounded-corner(top, right, 9px)
+
+
+//  BUTTONS
+
+a.button, button.button
+  background-image: url('../../images/button-background.png')
+  background-color: #eee
+  border: 1px solid #c3c4ba
+  font-family: helvetica, arial, sans-serif
+  font-weight: normal
+  @include rounded-corners(2px)
+
+  &:link, &:visited, &:hover, &:active
+    font-weight: normal
+
+  &:hover
+    border: 1px solid $dark_grey
+    @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.3))
+
+a.button:active, button.button:active
+  // quando se clica no bot√£o
+  background-image: url('../../images/button-background-active.png')
+  outline: none /* hide dotted outline in Firefox */
+
+
+a.global_button
+  // bot√£o global do bloco
+  &:link, &:visited, &:hover, &:active
+    color: #222
+    display: block
+    font-size: 1em
+    line-height: 1.3em
+    cursor: pointer
+    font-weight: normal
+    text-decoration: none
+    float: right
+    padding: 8px 10px 6px 7px
+    margin: 0 9px 0 0
+    @include rounded-corners(2px)
+
+  img
+    margin: 0 3px -3px 0 !important
+    padding: 0
+    border: none
+    width: 16px
+    height: 16px
+
+
+// FORMS
+
+.form div
+  &.left
+    width: 10%
+    float: left
+  &.right
+    width: 85%
+    float: right
+
+.login div
+  // formul√°rio para login
+  &.left
+    width: 21%
+    float: left
+  &.right
+    width: 74%
+    float: right
+
+.signup div
+  // formul√°rio para signup
+  @extend .login
+
+
+// ICONS FILETYPES
+
+.filetype
+  background-image: url('../../../images/filetype/unknown.png')
+  background-repeat: no-repeat
+  padding-top: 9px
+  padding-left: 11px
+  font-size: 14px
+  color: $grey
+  width: 100px
+  height: 128px
+
+
+// Informa√ß√£o adicional para t√≠tulos
+
+.highlighted-title-info
+  display: inline
+  font-size: 13px
+  vertical-align: top
+  padding-left: 3px
+  padding-right: 5px
+  margin-left: 5px
+  font-weight: normal
+  text-transform: lowercase
+  @include rounded-corners(4px)
+
+.highlighted-title-info-grey
+  @extend .highlighted-title-info
+  background-color: $grey
+  color: white
+
+.highlighted-title-info-green
+  @extend .highlighted-title-info
+  background-color: #1fdf00
+  color: white
+
+.highlighted-title-info-yellow
+  @extend .highlighted-title-info
+  background-color: $yellow
+  color: black
+
+.highlighted-title-info-red
+  @extend .highlighted-title-info
+  background-color: $red
+  color: white
+:@options{:css_location"./public/stylesheets:full_exceptionT:css_filename"activo.css:template_location[ :
+style:compressed:line_comments0:always_updateF:property_syntax0:load_paths[".:cache_location"./.sass-cache:always_checkT:syntax:	sass:filename"./style.sass:
+cacheT:@children[Ro:Sass::Tree::CommentNode:@silentF:@value"/*    David Marqu√™s Francisco
+ *    (dfrancisc[at]gmail.com)
+ *
+ *    Originally based on the theme "Drastic
+ *    Dark" by Juan Maria Martinez Arce
+ *    (juan[at]insignia4u.com)
+ *
+ *    Added components that doesn't exist in
+ *    other web-app-theme themes
+ *    -----------------------------------------
+ *
+ *    #full-main (ocupa os 100% de width para
+ *      p√°ginas que n√£o t√™m barra lateral)
+ *    .flash .error-list
+ *    #sidebar .warning
+ *    .breadcrumb
+ *    .searchform
+ *    a.global_button (n√£o est√° a ser utilizado
+ *      mas pode ser √∫til. S√£o bot√µes que ficam
+ *      na barra de separadores)
+ *    .block-norounded (blocos sem as pontas
+ *      arredondadas)
+ *    .secondary-inner-nav (navega√ß√£o sem as
+ *      pontas arredondadas para blocos
+ *      interiores)
+ *    div.tooltip (reimplementa o aspecto das
+ *      tooltips que mostram o 'title' das
+ *      imagens)
+ *    .highlighted-title-info (informa√ß√£o
+ *      adicional para t√≠tulos)
+ *
+ *                                           */;@:@filename@:@lines[ :
+@linei;[ o;;T;"4/////////////////// COLORS ////////////////////;@;@;[ ;i);[ o:Sass::Tree::VariableNode;@:@guarded0;@:
+@name"light_grey:
+@expro:Sass::Script::Color
+:@context:default;0;@;i+:@attrs{	:rediÙ:
+alphai:
+greeniÙ:	blueiÙ;i+;[ o;;@; 0;@;!"not_so_light_grey;"o;#
+;$;%;0;@;i,;&{	;'iÊ;(i;)iÊ;*i‡;i,;[ o;;@; 0;@;!"	grey;"o;#
+;$;%;0;@;i-;&{	;'i•;(i;)i•;*iî;i-;[ o;;@; 0;@;!"dark_grey;"o;#
+;$;%;0;@;i.;&{	;'iÅ;(i;)iÅ;*iv;i.;[ o;;@; 0;@;!"
+black;"o;#
+;$;%;0;@;i/;&{	;'i+;(i;)i$;*i$;i/;[ o;;@; 0;@;!"black_text;"o;#
+;$;%;0;@;i0;&{	;'i;(i;)i;*i;i0;[ o;;@; 0;@;!"red;"o;#
+;$;%;0;@;i1;&{	;'iÃ;(i;)i ;*i ;i1;[ o;;@; 0;@;!"light_blue;"o;#
+;$;%;0;@;i2;&{	;'iÊ;(i;)iÓ;*i¸;i2;[ o;;@; 0;@;!"interactive_yellow;"o;#
+;$;%;0;@;i3;&{	;'iˇ;(i;)iˇ;*ià;i3;[ o;;@; 0;@;!"yellow;"o;#
+;$;%;0;@;i4;&{	;'iˇ;(i;)iÓ;*i~;i4;[ o;;T;"4///////////////////////////////////////////////;@;@;[ ;i7;[ o:Sass::Tree::RuleNode;@:
+@rule["	body;@;i9;[o:Sass::Tree::PropNode;o:Sass::Script::Variable	;$;%;@;!"black_text;i:;@:@prop_syntax:new;@;!["
+color;i:;[ :
+@tabsi o;-;o;.	;$;%;@;!"light_grey;i;;@;/;0;@;!["background;i;;[ ;1i o;-;o:Sass::Script::Operation;$;%;@:@operator:
+comma:@operand1o;2;$;%;@;3;4;5o:Sass::Script::String
+;$;%;"helvetica;@:
+@type:identifier;i<;i<:@operand2o;6
+;$;%;"
+arial;@;7;8;i<;i<;9o;6
+;$;%;"sans-serif;@;7;8;i<;@;/;0;@;!["font-family;i<;[ ;1i :@has_childrenT;1i o;+;@;,["h1, h2, h3;@;i>;[o;-;o;.	;$;%;@;!"black_text;i?;@;/;0;@;!["
+color;i?;[ ;1i ;:T;1i o;+;@;,[")a:link, a:visited, a:hover, a:active;@;iA;[o;-;o;.	;$;%;@;!"black_text;iB;@;/;0;@;!["
+color;iB;[ ;1i ;:T;1i o;+;@;,["a;@;iD;[o;-;o;6
+;$;%;"	none;@;7;8;iE;@;/;0;@;!["-moz-outline;iE;[ ;1i ;:T;1i o;+;@;,["hr;@;iG;[o;-;o;.	;$;%;@;!"light_grey;iH;@;/;0;@;!["background;iH;[ ;1i o;-;o;.	;$;%;@;!"light_grey;iI;@;/;0;@;!["
+color;iI;[ ;1i ;:T;1i o;;T;"// HEADER;@;@;[ ;iK;[ o;+;@;,["#header;@;iM;[
+o;-;o;.	;$;%;@;!"
+black;iN;@;/;0;@;!["background-color;iN;[ ;1i o;-;o:Sass::Script::Funcall
+;$;%;@:
+@args[o;6
+;$;%;"../../images/logo.png;@;7:string;iO;!"url;iO;@;/;0;@;!["background-image;iO;[ ;1i o;-;o;6
+;$;%;"no-repeat;@;7;8;iP;@;/;0;@;!["background-repeat;iP;[ ;1i o;-;o;2;$;%;@;3:concat;5o:Sass::Script::Number;$;%;i;@:@numerator_units["px;iQ:@original"	20px:@denominator_units[ ;iQ;9o;?;$;%;i;@;@["px;iQ;A"	20px;B[ ;@;/;0;@;!["background-position;iQ;[ ;1i o;+;@;,["h1;@;iS;[o;-;o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iT;A"	15px;B[ ;iT;9o;?;$;%;i<;@;@["px;iT;A"	55px;B[ ;@;/;0;@;!["padding;iT;[ ;1i o;-;o;?;$;%;i-;@;@["px;iU;A"	40px;B[ ;@;/;0;@;!["font-size;iU;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iV;@;/;0;@;!["font-style;iV;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iW;@;/;0;@;!["text-transform;iW;[ ;1i o;-;o;?;$;%;i˙;@;@["px;iX;A"	-1px;B[ ;@;/;0;@;!["letter-spacing;iX;[ ;1i o;-;o;?;$;%;f1.2 33;@;@["em;iY;A"
+1.2em;B[ ;@;/;0;@;!["line-height;iY;[ ;1i o;-;o;#
+;$;%;0;@;iZ;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;iZ;[ ;1i o:Sass::Tree::MixinNode;@;<[	o;#
+;$;%;0;@;i[;&{	;'i ;(i;)i ;*i o;?;$;%;i;@;@["px;i[;A"1px;B[ o;?;$;%;i;@;@["px;i[;A"1px;B[ o;?;$;%;i;@;@[ ;i[;A"2;B[ ;@;!"text-shadow;i[;[ o;-;o;?;$;%;i7;@;@["px;i\;A"	50px;B[ ;@;/;0;@;!["height;i\;[ ;1i o;+;@;,[")a:link, a:active, a:hover, a:visited;@;i^;[o;-;o;#
+;$;%;0;@;i_;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;i_;[ ;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// MAIN AREA;@;@;[ ;ib;[ o;+;@;,["
+#main;@;id;[
+o;;T;"&// se for para utilizar a sidebar;@;@;[ ;ie;[ o;-;o;?;$;%;iR;@;@["%;if;A"77%;B[ ;@;/;0;@;!["
+width;if;[ ;1i o;-;o;6
+;$;%;"	left;@;7;8;ig;@;/;0;@;!["
+float;ig;[ ;1i o;+;@;,[".block;@;ii;[o;;T;" // caixa de texto principal;@;@;[ ;ij;[ o;-;o;?;$;%;i ;@;@["px;ik;A"0px;B[ ;@;/;0;@;!["padding-top;ik;[ ;1i o;-;o;#
+;$;%;0;@;il;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background;il;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;im;A"0;B[ o;?;$;%;i;@;@["px;im;A"1px;B[ o;?;$;%;i;@;@["px;im;A"3px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;im;A"0;B[ o;?;$;%;i ;@;@[ ;im;A"0;B[ o;?;$;%;i ;@;@[ ;im;A"0;B[ o;?;$;%;f0.40000000000000002 ôö;@;@[ ;im;A"0.4;B[ ;!"	rgba;im;@;!"box-shadow;im;[ o;C;@;<[o;?;$;%;i;@;@["px;in;A"9px;B[ ;@;!"rounded-corners;in;[ o;+;@;,[".content;@;ip;[	o;-;o;?;$;%;i;@;@["px;iq;A"1px;B[ ;@;/;0;@;!["padding-top;iq;[ ;1i o;+;@;,[".inner;@;ir;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i ;@;@[ ;is;A"0;B[ ;is;9o;?;$;%;i;@;@["px;is;A"	15px;B[ ;is;9o;?;$;%;i;@;@["px;is;A"	15px;B[ ;@;/;0;@;!["padding;is;[ ;1i ;:T;1i o;+;@;,["h2;@;it;[o;-;o;?;$;%;i;@;@["px;iu;A"	15px;B[ ;@;/;0;@;!["margin-left;iu;[ ;1i o;-;o;?;$;%;i;@;@["px;iv;A"	22px;B[ ;@;/;0;@;!["font-size;iv;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iw;@;/;0;@;!["font-style;iw;[ ;1i o;-;o;6
+;$;%;"	bold;@;7;8;ix;@;/;0;@;!["font-weight;ix;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iy;@;/;0;@;!["text-transform;iy;[ ;1i o;-;o;?;$;%;i˙;@;@["px;iz;A"	-1px;B[ ;@;/;0;@;!["letter-spacing;iz;[ ;1i o;-;o;?;$;%;f1.2 33;@;@["em;i{;A"
+1.2em;B[ ;@;/;0;@;!["line-height;i{;[ ;1i ;:T;1i o;+;@;,["p;@;i|;[o;-;o;?;$;%;i;@;@["px;i};A"	13px;B[ ;@;/;0;@;!["font-size;i};[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i~;@;/;0;@;!["font-style;i~;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i;@;/;0;@;!["font-weight;i;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i{;@;/;0;@;!["text-transform;i{;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i|;@;/;0;@;!["letter-spacing;i|;[ ;1i o;-;o;?;$;%;f1.45 33;@;@["em;i};A"1.45em;B[ ;@;/;0;@;!["line-height;i};[ ;1i ;:T;1i ;:T;1i ;:T;1i o;+;@;,[".block-norounded;@;i;[o;;T;"'// vers√£o sem cantos arredondados;@;@;[ ;iÄ;[ o;C;@;<[	o;?;$;%;i ;@;@[ ;iÅ;A"0;B[ o;?;$;%;i ;@;@[ ;iÅ;A"0;B[ o;?;$;%;i	;@;@["px;iÅ;A"4px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;iÅ;A"0;B[ o;?;$;%;i ;@;@[ ;iÅ;A"0;B[ o;?;$;%;i ;@;@[ ;iÅ;A"0;B[ o;?;$;%;f0.29999999999999999 33;@;@[ ;iÅ;A"0.3;B[ ;!"	rgba;iÅ;@;!"box-shadow;iÅ;[ ;:T;1i ;:T;1i o;+;@;,["#full-main;@;iÉ;[	o;;T;"=// igual a 'main' mas ocupa toda a largura (sem sidebar);@;@;[ ;iÑ;[ o:Sass::Tree::ExtendNode
+:@selector["
+#main;@;@;iÖ;[ o;-;o;?;$;%;ii;@;@["%;iÜ;A"	100%;B[ ;@;/;0;@;!["
+width;iÜ;[ ;1i o;+;@;,[".block;@;iá;[o;-;o;?;$;%;i;@;@["px;ià;A"	20px;B[ ;@;/;0;@;!["margin-bottom;ià;[ ;1i ;:T;1i ;:T;1i o;;T;"// MAIN NAVIGATION;@;@;[ ;iã;[ o;+;@;,["#main-navigation;@;iç;[o;;T;"// barra de menus do topo;@;@;[ ;ié;[ o;+;@;,["ul;@;iè;[o;+;@;,["li;@;iê;[o;-;o;6
+;$;%;"	left;@;7;8;ië;@;/;0;@;!["
+float;ië;[ ;1i o;-;o;?;$;%;i;@;@["px;ií;A"	15px;B[ ;@;/;0;@;!["padding-left;ií;[ ;1i o;-;o;?;$;%;i
+;@;@["px;iì;A"5px;B[ ;@;/;0;@;!["padding-right;iì;[ ;1i o;-;o;?;$;%;i ;@;@[ ;iî;A"0;B[ ;@;/;0;@;!["margin-right;iî;[ ;1i o;+;@;,[")a:link, a:visited, a:hover, a:active;@;iñ;[o;-;o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;ió;A"8px;B[ ;ió;9o;?;$;%;i ;@;@[ ;ió;A"0;B[ ;@;/;0;@;!["padding;ió;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;iò;@;/;0;@;!["text-decoration;iò;[ ;1i o;-;o;.	;$;%;@;!"black_text;iô;@;/;0;@;!["
+color;iô;[ ;1i ;:T;1i o;+;@;,["&.active;@;iõ;[o;+;@;,[")a:link, a:visited, a:hover, a:active;@;iú;[o;-;o;.	;$;%;@;!"	grey;iù;@;/;0;@;!["
+color;iù;[ ;1i ;:T;1i ;:T;1i ;:T;1i ;:T;1i o;-;o;.	;$;%;@;!"light_grey;iü;@;/;0;@;!["background-color;iü;[ ;1i o;-;o;;
+;$;%;@;<[o;6
+;$;%;"(../../images/menubar-background.png;@;7;=;i†;!"url;i†;@;/;0;@;!["background-image;i†;[ ;1i o;-;o;6
+;$;%;"repeat-x;@;7;8;i°;@;/;0;@;!["background-repeat;i°;[ ;1i o;C;@;<[o;6
+;$;%;"top;@;7;8;i£o;6
+;$;%;"	left;@;7;8;i£o;?;$;%;i;@;@["px;i£;A"9px;B[ ;@;!"rounded-corner;i£;[ o;C;@;<[o;6
+;$;%;"top;@;7;8;i§o;6
+;$;%;"
+right;@;7;8;i§o;?;$;%;i;@;@["px;i§;A"9px;B[ ;@;!"rounded-corner;i§;[ ;:T;1i o;;T;"// TOP NAVIGATION;@;@;[ ;iß;[ o;+;@;,[".secondary-navigation;@;i©;[o;-;o;#
+;$;%;0;@;i™;&{	;'iÚ;(i;)iÒ;*iÓ;@;/;0;@;!["background-color;i™;[ ;1i o;-;o;;
+;$;%;@;<[o;6
+;$;%;"'../../images/boxbar-background.png;@;7;=;i´;!"url;i´;@;/;0;@;!["background-image;i´;[ ;1i o;-;o;?;$;%;i ;@;@["px;i¨;A"0px;B[ ;@;/;0;@;!["border-bottom-width;i¨;[ ;1i o;C;@;<[o;6
+;$;%;"top;@;7;8;i≠o;6
+;$;%;"	left;@;7;8;i≠o;?;$;%;i;@;@["px;i≠;A"9px;B[ ;@;!"rounded-corner;i≠;[ o;C;@;<[o;6
+;$;%;"top;@;7;8;iÆo;6
+;$;%;"
+right;@;7;8;iÆo;?;$;%;i;@;@["px;iÆ;A"9px;B[ ;@;!"rounded-corner;iÆ;[ o;+;@;,["li.first a, ul li.first;@;i∞;[o;C;@;<[o;6
+;$;%;"top;@;7;8;i±o;6
+;$;%;"	left;@;7;8;i±o;?;$;%;i;@;@["px;i±;A"9px;B[ ;@;!"rounded-corner;i±;[ ;:T;1i o;+;@;,["ul li a;@;i≥;[o;+;@;,[")&:link, &:visited, &:hover, &:active;@;i¥;[o;-;o;6
+;$;%;"	none;@;7;8;iµ;@;/;0;@;!["text-decoration;iµ;[ ;1i o;-;o;.	;$;%;@;!"black_text;i∂;@;/;0;@;!["
+color;i∂;[ ;1i ;:T;1i ;:T;1i o;+;@;,["ul li.text;@;i∏;[o;-;o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iπ;A"	10px;B[ ;iπ;9o;?;$;%;i;@;@["px;iπ;A"	15px;B[ ;@;/;0;@;!["padding;iπ;[ ;1i o;-;o;#
+;$;%;0;@;i∫;&{	;'iÅ;(i;)iÅ;*iv;@;/;0;@;!["
+color;i∫;[ ;1i ;:T;1i o;+;@;,["ul li.active;@;iº;[o;-;o;#
+;$;%;0;@;iΩ;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background-color;iΩ;[ ;1i o;+;@;,["a:hover;@;iæ;[o;-;o;#
+;$;%;0;@;iø;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background-color;iø;[ ;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// USER NAVIGATION;@;@;[ ;i¬;[ o;+;@;,["#user-navigation;@;iƒ;[o;-;o;6
+;$;%;"	auto;@;7;8;i≈;@;/;0;@;!["top;i≈;[ ;1i o;-;o;?;$;%;i;@;@["px;i∆;A"	25px;B[ ;@;/;0;@;!["
+right;i∆;[ ;1i ;:T;1i o;+;@;,["#user-navigation ul li a;@;i»;[o;+;@;,[")&:link, &:visited, &:hover, &:active;@;i…;[o;-;o;6
+;$;%;"	none;@;7;8;i ;@;/;0;@;!["text-decoration;i ;[ ;1i o;-;o;.	;$;%;@;!"black_text;iÀ;@;/;0;@;!["
+color;iÀ;[ ;1i ;:T;1i ;:T;1i o;+;@;,["8#user-navigation ul li, .secondary-navigation ul li;@;iÕ;[o;-;o;6
+;$;%;"	left;@;7;8;iŒ;@;/;0;@;!["
+float;iŒ;[ ;1i ;:T;1i o;;T;"// SECONDARY INNER NAV;@;@;[ ;i—;[ o;+;@;,[".secondary-inner-nav;@;i”;[o;-;o;#
+;$;%;0;@;i‘;&{	;'i;(i;)iÔ;*i;@;/;0;@;!["background-color;i‘;[ ;1i o;-;o;;
+;$;%;@;<[o;6
+;$;%;"'../../images/boxbar-background.png;@;7;=;i’;!"url;i’;@;/;0;@;!["background-image;i’;[ ;1i o;-;o;?;$;%;i;@;@["px;i÷;A"	13px;B[ ;@;/;0;@;!["font-size;i÷;[ ;1i o;-;o;#
+;$;%;0;@;iÿ;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["border-bottom-color;iÿ;[ ;1i o;-;o;?;$;%;i;@;@["px;iŸ;A"	10px;B[ ;@;/;0;@;!["border-bottom-width;iŸ;[ ;1i o;-;o;6
+;$;%;"
+solid;@;7;8;i⁄;@;/;0;@;!["border-bottom-style;i⁄;[ ;1i o;+;@;,["ul;@;i‹;[	o;-;o;?;$;%;i ;@;@[ ;i›;A"0;B[ ;@;/;0;@;!["margin;i›;[ ;1i o;-;o;?;$;%;i ;@;@[ ;iﬁ;A"0;B[ ;@;/;0;@;!["padding;iﬁ;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;iﬂ;@;/;0;@;!["list-style-type;iﬂ;[ ;1i o;+;@;,["li;@;i·;[o;-;o;6
+;$;%;"	left;@;7;8;i‚;@;/;0;@;!["
+float;i‚;[ ;1i o;+;@;,["&.active;@;i„;[o;-;o;#
+;$;%;0;@;i‰;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background-color;i‰;[ ;1i o;+;@;,["a:hover;@;iÂ;[o;-;o;#
+;$;%;0;@;iÊ;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background-color;iÊ;[ ;1i ;:T;1i ;:T;1i o;+;@;,["a;@;iÁ;[o;-;o;6
+;$;%;"
+block;@;7;8;iË;@;/;0;@;!["display;iË;[ ;1i o;-;o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iÈ;A"	10px;B[ ;iÈ;9o;?;$;%;i;@;@["px;iÈ;A"	15px;B[ ;@;/;0;@;!["padding;iÈ;[ ;1i o;+;@;,[")&:link, &:visited, &:hover, &:active;@;iÍ;[o;-;o;6
+;$;%;"	none;@;7;8;iÎ;@;/;0;@;!["text-decoration;iÎ;[ ;1i o;-;o;.	;$;%;@;!"
+black;iÏ;@;/;0;@;!["
+color;iÏ;[ ;1i ;:T;1i ;:T;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// WELCOME MESSAGE;@;@;[ ;iÔ;[ o;+;@;,["#status;@;iÒ;[o;-;o;?;$;%;i;@;@["px;iÚ;A"	20px;B[ ;@;/;0;@;!["margin-top;iÚ;[ ;1i o;-;o;?;$;%;i;@;@["px;iÛ;A"	15px;B[ ;@;/;0;@;!["padding;iÛ;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;iÙ;@;/;0;@;!["
+float;iÙ;[ ;1i o;-;o;#
+;$;%;0;@;iı;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;iı;[ ;1i o;-;o;?;$;%;i;@;@["px;iˆ;A"	16px;B[ ;@;/;0;@;!["font-size;iˆ;[ ;1i o;C;@;<[	o;#
+;$;%;0;@;i˜;&{	;'i ;(i;)i ;*i o;?;$;%;i;@;@["px;i˜;A"1px;B[ o;?;$;%;i;@;@["px;i˜;A"1px;B[ o;?;$;%;i;@;@[ ;i˜;A"2;B[ ;@;!"text-shadow;i˜;[ ;:T;1i o;+;@;,["#status a;@;i˘;[o;-;o;#
+;$;%;0;@;i˙;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;i˙;[ ;1i ;:T;1i o;;T;"// FOOTER;@;@;[ ;i˝;[ o;+;@;,["#footer;@;iˇ;[o;+;@;,[".block;@;i ;[o;-;o;#
+;$;%;0;@;i;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;i;[ ;1i o;-;o;.	;$;%;@;!"
+black;i;@;/;0;@;!["background;i;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corners;i;[ ;:T;1i o;+;@;,["p;@;i;[	o;-;o;?;$;%;i ;@;@[ ;i;A"0;B[ ;@;/;0;@;!["margin;i;[ ;1i o;-;o;?;$;%;i ;@;@[ ;i;A"0;B[ ;@;/;0;@;!["padding;i;[ ;1i o;-;o;6
+;$;%;"center;@;7;8;i;@;/;0;@;!["text-align;i;[ ;1i o;-;o;#
+;$;%;0;@;i;&{	;'iª;(i;)iª;*i∑;@;/;0;@;!["
+color;i;[ ;1i ;:T;1i ;:T;1i o;;T;"// SIDEBAR;@;@;[ ;i;[ o;+;@;,["#sidebar;@;i;[o;-;o;?;$;%;i;@;@["%;i;A"20%;B[ ;@;/;0;@;!["
+width;i;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;i;@;/;0;@;!["
+float;i;[ ;1i o;+;@;,[".block;@;i;[
+o;;T;"// caixas da barra lateral;@;@;[ ;i;[ o;-;o;?;$;%;i;@;@["px;i;A"2px;B[ ;@;/;0;@;!["padding-top;i;[ ;1i o;-;o;?;$;%;i;@;@["px;i;A"2px;B[ ;@;/;0;@;!["padding-bottom;i;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corners;i;[ o;+;@;,["h4;@;i;[o;;T;"5// t√≠tulos das caixas de texto da barra lateral;@;@;[ ;i;[ o;-;o;6
+;$;%;"	bold;@;7;8;i;@;/;0;@;!["font-weight;i;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".notice;@;i;[o;;T;"(// caixas de aviso da barra lateral;@;@;[ ;i;[ o;-;o;#
+;$;%;0;@;i;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background;i;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i;@;@["px;i;A"1px;B[ o;?;$;%;i;@;@["px;i;A"3px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;f0.40000000000000002 ôö;@;@[ ;i;A"0.4;B[ ;!"	rgba;i;@;!"box-shadow;i;[ ;:T;1i o;+;@;,[".warning;@;i;[	o;;T;"(// caixas de aviso da barra lateral;@;@;[ ;i ;[ o;-;o;.	;$;%;@;!"yellow;i!;@;/;0;@;!["background;i!;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;i";A"0;B[ o;?;$;%;i;@;@["px;i";A"1px;B[ o;?;$;%;i;@;@["px;i";A"3px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;i";A"0;B[ o;?;$;%;i ;@;@[ ;i";A"0;B[ o;?;$;%;i ;@;@[ ;i";A"0;B[ o;?;$;%;f0.40000000000000002 ôö;@;@[ ;i";A"0.4;B[ ;!"	rgba;i";@;!"box-shadow;i";[ o;-;o;?;$;%;i;@;@["px;i#;A"	10px;B[ ;@;/;0;@;!["padding;i#;[ ;1i ;:T;1i o;+;@;,["h3;@;i%;[	o;;T;"// t√≠tulo da sidebar;@;@;[ ;i&;[ o;-;o;?;$;%;i;@;@["px;i';A"	25px;B[ ;@;/;0;@;!["padding-left;i';[ ;1i o;-;o;.	;$;%;@;!"black_text;i(;@;/;0;@;!["
+color;i(;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i);A"1px;B[ ;i);9o;6
+;$;%;"
+solid;@;7;8;i);i);9o;.	;$;%;@;!"
+black;i);@;/;0;@;!["border-bottom;i);[ ;1i ;:T;1i o;+;@;,["
+ul li;@;i+;[o;;T;"// lista da barra lateral;@;@;[ ;i,;[ o;-;o;2;$;%;@;3;>;5o;?;$;%;i ;@;@[ ;i-;A"0;B[ ;i-;9o;?;$;%;i;@;@["px;i-;A"	11px;B[ ;@;/;0;@;!["background-position;i-;[ ;1i o;-;o;6
+;$;%;"no-repeat;@;7;8;i.;@;/;0;@;!["background-repeat;i.;[ ;1i o;-;o;;
+;$;%;@;<[o;6
+;$;%;"../../images/arrow.png;@;7;=;i/;!"url;i/;@;/;0;@;!["background-image;i/;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i0;A"1px;B[ ;i0;9o;6
+;$;%;"
+solid;@;7;8;i0;i0;9o;.	;$;%;@;!"not_so_light_grey;i0;@;/;0;@;!["border-bottom;i0;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;i1;@;/;0;@;!["list-style-type;i1;[ ;1i o;;T;"// elementos da lista;@;@;[ ;i2;[ o;+;@;,["a;@;i3;[o;-;o;?;$;%;i;@;@["px;i4;A"	10px;B[ ;@;/;0;@;!["margin-left;i4;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;i5;@;/;0;@;!["text-decoration;i5;[ ;1i ;:T;1i o;;T;"// elemento seleccionado;@;@;[ ;i6;[ o;+;@;,["&.active a;@;i7;[o;-;o;.	;$;%;@;!"	grey;i8;@;/;0;@;!["
+color;i8;[ ;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// BREADCRUMB;@;@;[ ;i;;[ o;+;@;,[".breadcrumb;@;i=;[	o;-;o;#
+;$;%;0;@;i>;&{	;'iÊ;(i;)iÊ;*i‡;@;/;0;@;!["background-color;i>;[ ;1i o;C;@;<[o;6
+;$;%;"bottom;@;7;8;i?o;6
+;$;%;"	left;@;7;8;i?o;?;$;%;i;@;@["px;i?;A"9px;B[ ;@;!"rounded-corner;i?;[ o;C;@;<[o;6
+;$;%;"bottom;@;7;8;i@o;6
+;$;%;"
+right;@;7;8;i@o;?;$;%;i;@;@["px;i@;A"9px;B[ ;@;!"rounded-corner;i@;[ o;+;@;,["ul;@;iB;[
+o;-;o;?;$;%;i;@;@["px;iC;A"	20px;B[ ;@;/;0;@;!["height;iC;[ ;1i o;-;o;?;$;%;i;@;@["px;iD;A"	15px;B[ ;@;/;0;@;!["padding-bottom;iD;[ ;1i o;-;o;?;$;%;i ;@;@["px;iE;A"0px;B[ ;@;/;0;@;!["padding-top;iE;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;iF;@;/;0;@;!["list-style-type;iF;[ ;1i o;+;@;,["li;@;iH;[o;-;o;#
+;$;%;0;@;iI;&{	;'i|;(i;)i|;*i|;@;/;0;@;!["
+color;iI;[ ;1i o;-;o;6
+;$;%;"
+block;@;7;8;iJ;@;/;0;@;!["display;iJ;[ ;1i o;-;o;?;$;%;i;@;@["px;iK;A"	10px;B[ ;@;/;0;@;!["padding-top;iK;[ ;1i o;-;o;?;$;%;i;@;@["px;iL;A"	17px;B[ ;@;/;0;@;!["padding-left;iL;[ ;1i o;-;o;?;$;%;i;@;@["px;iM;A"	15px;B[ ;@;/;0;@;!["margin-right;iM;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;;
+;$;%;@;<[o;6
+;$;%;" ../../images/breadcrumb.png;@;7;=;iN;!"url;iN;iN;9o;6
+;$;%;"no-repeat;@;7;8;iN;iN;9o;?;$;%;i ;@;@["px;iN;A"0px;B[ ;iN;9o;?;$;%;i;@;@["px;iN;A"	12px;B[ ;@;/;0;@;!["background;iN;[ ;1i o;-;o;6
+;$;%;"	left;@;7;8;iO;@;/;0;@;!["
+float;iO;[ ;1i o;+;@;,["a;@;iQ;[o;-;o;6
+;$;%;"	none;@;7;8;iR;@;/;0;@;!["text-decoration;iR;[ ;1i o;-;o;#
+;$;%;0;@;iS;&{	;'i|;(i;)i|;*i|;@;/;0;@;!["
+color;iS;[ ;1i ;:T;1i o;+;@;,["&.first;@;iT;[o;-;o;?;$;%;i;@;@["px;iU;A"	15px;B[ ;@;/;0;@;!["padding-left;iU;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;iV;@;/;0;@;!["background;iV;[ ;1i ;:T;1i o;+;@;,["&.active;@;iW;[o;-;o;.	;$;%;@;!"	grey;iX;@;/;0;@;!["
+color;iX;[ ;1i ;:T;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// CONTROLS;@;@;[ ;i[;[ o;+;@;,["#control;@;i];[o;-;o;6
+;$;%;"
+right;@;7;8;i^;@;/;0;@;!["
+float;i^;[ ;1i o;-;o;?;$;%;i;@;@["px;i_;A"9px;B[ ;@;/;0;@;!["margin-right;i_;[ ;1i o;-;o;?;$;%;i;@;@["px;i`;A"	11px;B[ ;@;/;0;@;!["margin-top;i`;[ ;1i ;:T;1i o;;T;"// PAGINATION;@;@;[ ;ic;[ o;+;@;,[".pagination;@;ie;[o;+;@;,["a, span;@;if;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;ig;A"1px;B[ ;ig;9o;6
+;$;%;"
+solid;@;7;8;ig;ig;9o;#
+;$;%;0;@;ig;&{	;'i√;(i;)iƒ;*i∫;@;/;0;@;!["border;ig;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;ih;A"2px;B[ ;@;!"rounded-corners;ih;[ o;-;o;?;$;%;i
+;@;@["px;ii;A"5px;B[ ;@;/;0;@;!["margin-right;ii;[ ;1i o;-;o;?;$;%;i;@;@["px;ij;A"6px;B[ ;@;/;0;@;!["padding;ij;[ ;1i o;-;o;?;$;%;i;@;@["px;ik;A"	15px;B[ ;@;/;0;@;!["min-width;ik;[ ;1i o;-;o;6
+;$;%;"center;@;7;8;il;@;/;0;@;!["text-align;il;[ ;1i o;-;o;.	;$;%;@;!"light_grey;im;@;/;0;@;!["background;im;[ ;1i o;-;o;;
+;$;%;@;<[o;6
+;$;%;"'../../images/button-background.png;@;7;=;in;!"url;in;@;/;0;@;!["background-image;in;[ ;1i o;-;o;.	;$;%;@;!"black_text;io;@;/;0;@;!["
+color;io;[ ;1i ;:T;1i o;+;@;,["a:hover;@;iq;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;ir;A"1px;B[ ;ir;9o;6
+;$;%;"
+solid;@;7;8;ir;ir;9o;.	;$;%;@;!"dark_grey;ir;@;/;0;@;!["border;ir;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;is;A"0;B[ o;?;$;%;i ;@;@[ ;is;A"0;B[ o;?;$;%;i	;@;@["px;is;A"4px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;is;A"0;B[ o;?;$;%;i ;@;@[ ;is;A"0;B[ o;?;$;%;i ;@;@[ ;is;A"0;B[ o;?;$;%;f0.29999999999999999 33;@;@[ ;is;A"0.3;B[ ;!"	rgba;is;@;!"box-shadow;is;[ ;:T;1i o;+;@;,["span.current;@;iu;[o;-;o;.	;$;%;@;!"
+black;iv;@;/;0;@;!["background;iv;[ ;1i o;-;o;#
+;$;%;0;@;iw;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;iw;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;ix;A"1px;B[ ;ix;9o;6
+;$;%;"
+solid;@;7;8;ix;ix;9o;.	;$;%;@;!"
+black;ix;@;/;0;@;!["border;ix;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".pagination a:active;@;iz;[o;;T;"// quando se clica;@;@;[ ;i{;[ o;-;o;;
+;$;%;@;<[o;6
+;$;%;".../../images/button-background-active.png;@;7;=;i|;!"url;i|;@;/;0;@;!["background-image;i|;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;i};@;/;0;@;!["outline;i};[ ;1i ;:T;1i o;;T;"// TABLES;@;@;[ ;iÄ;[ o;+;@;,[".table;@;iÇ;[o;+;@;,["th;@;iÉ;[	o;-;o;#
+;$;%;0;@;iÑ;&{	;'iÎ;(i;)iÎ;*i„;@;/;0;@;!["background;iÑ;[ ;1i o;-;o;#
+;$;%;0;@;iÖ;&{	;'i';(i;)i';*i';@;/;0;@;!["
+color;iÖ;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iÜ;@;/;0;@;!["font-weight;iÜ;[ ;1i o;+;@;,["&.last;@;iá;[o;-;o;?;$;%;iU;@;@["px;ià;A"	80px;B[ ;@;/;0;@;!["
+width;ià;[ ;1i ;:T;1i ;:T;1i o;+;@;,["td;@;iâ;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iä;A"1px;B[ ;iä;9o;6
+;$;%;"
+solid;@;7;8;iä;iä;9o;#
+;$;%;0;@;iä;&{	;'iÎ;(i;)iÎ;*i„;@;/;0;@;!["border-bottom;iä;[ ;1i o;+;@;,["&.last;@;iã;[o;;T;"?// coluna em que aparecem os √≠cones (maiores que o texto);@;@;[ ;iå;[ o;-;o;?;$;%;i ;@;@["px;iç;A"0px;B[ ;@;/;0;@;!["padding-top;iç;[ ;1i o;-;o;?;$;%;i ;@;@["px;ié;A"0px;B[ ;@;/;0;@;!["padding-bottom;ié;[ ;1i ;:T;1i ;:T;1i o;+;@;,["tr.even;@;iè;[o;-;o;#
+;$;%;0;@;iê;&{	;'i¯;(i;)i¯;*iÙ;@;/;0;@;!["background;iê;[ ;1i ;:T;1i ;:T;1i o;;T;"// FORMS;@;@;[ ;iì;[ o;+;@;,["
+.form;@;iï;[
+o;+;@;,["label.label;@;iñ;[o;-;o;#
+;$;%;0;@;ió;&{	;'ik;(i;)ik;*ik;@;/;0;@;!["
+color;ió;[ ;1i ;:T;1i o;+;@;,[")input.text_field, textarea.text_area;@;iô;[o;-;o;?;$;%;ii;@;@["%;iö;A"	100%;B[ ;@;/;0;@;!["
+width;iö;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iõ;A"1px;B[ ;iõ;9o;6
+;$;%;"
+solid;@;7;8;iõ;iõ;9o;.	;$;%;@;!"light_grey;iõ;@;/;0;@;!["border;iõ;[ ;1i ;:T;1i o;+;@;,["input.button;@;iù;[o;-;o;.	;$;%;@;!"light_grey;iû;@;/;0;@;!["background;iû;[ ;1i o;C;@;<[o;?;$;%;i
+;@;@["px;iü;A"5px;B[ ;@;!"rounded-corners;iü;[ o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i†;A"1px;B[ ;i†;9o;6
+;$;%;"
+solid;@;7;8;i†;i†;9o;#
+;$;%;0;@;i†;&{	;'i¡;(i;)i¡;*i¡;@;/;0;@;!["border;i†;[ ;1i o;-;o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i°;A"2px;B[ ;i°;9o;?;$;%;i
+;@;@["px;i°;A"5px;B[ ;@;/;0;@;!["padding;i°;[ ;1i o;-;o;6
+;$;%;"pointer;@;7;8;i¢;@;/;0;@;!["cursor;i¢;[ ;1i o;-;o;.	;$;%;@;!"black_text;i£;@;/;0;@;!["
+color;i£;[ ;1i o;-;o;6
+;$;%;"	bold;@;7;8;i§;@;/;0;@;!["font-weight;i§;[ ;1i o;-;o;?;$;%;i;@;@["px;i•;A"	11px;B[ ;@;/;0;@;!["font-size;i•;[ ;1i o;+;@;,["&:hover;@;i¶;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iß;A"1px;B[ ;iß;9o;6
+;$;%;"
+solid;@;7;8;iß;iß;9o;#
+;$;%;0;@;iß;&{	;'ik;(i;)ik;*ik;@;/;0;@;!["border;iß;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".description;@;i©;[o;-;o;6
+;$;%;"italic;@;7;8;i™;@;/;0;@;!["font-style;i™;[ ;1i o;-;o;#
+;$;%;0;@;i´;&{	;'iå;(i;)iå;*iå;@;/;0;@;!["
+color;i´;[ ;1i o;-;o;?;$;%;f0.90000000000000002 ÃÕ;@;@["em;i¨;A"
+0.9em;B[ ;@;/;0;@;!["font-size;i¨;[ ;1i ;:T;1i o;+;@;,[".navform a;@;iÆ;[o;-;o;.	;$;%;@;!"red;iØ;@;/;0;@;!["
+color;iØ;[ ;1i ;:T;1i ;:T;1i o;;T;"// SEARCH;@;@;[ ;i≤;[ o;+;@;,[".search;@;i¥;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iµ;A"1px;B[ ;iµ;9o;6
+;$;%;"
+solid;@;7;8;iµ;iµ;9o;#
+;$;%;0;@;iµ;&{	;'i¡;(i;)i¡;*i¡;@;/;0;@;!["border;iµ;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i∂;A"2px;B[ ;@;!"rounded-corners;i∂;[ o;-;o;?;$;%;i ;@;@["px;i∑;A"0px;B[ ;@;/;0;@;!["padding;i∑;[ ;1i o;-;o;?;$;%;i ;@;@["px;i∏;A"0px;B[ ;@;/;0;@;!["margin;i∏;[ ;1i o;-;o;6
+;$;%;"relative;@;7;8;iπ;@;/;0;@;!["position;iπ;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;i∫;@;/;0;@;!["
+float;i∫;[ ;1i o;-;o;?;$;%;i,;@;@["px;iª;A"
+300px;B[ ;@;/;0;@;!["
+width;iª;[ ;1i o;-;o;?;$;%;i;@;@["px;iº;A"	25px;B[ ;@;/;0;@;!["height;iº;[ ;1i o;+;@;,["&:hover;@;iΩ;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iæ;A"1px;B[ ;iæ;9o;6
+;$;%;"
+solid;@;7;8;iæ;iæ;9o;#
+;$;%;0;@;iæ;&{	;'i¢;(i;)i¢;*iî;@;/;0;@;!["border;iæ;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;iø;A"0;B[ o;?;$;%;i ;@;@[ ;iø;A"0;B[ o;?;$;%;i	;@;@["px;iø;A"4px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;iø;A"0;B[ o;?;$;%;i ;@;@[ ;iø;A"0;B[ o;?;$;%;i ;@;@[ ;iø;A"0;B[ o;?;$;%;f0.29999999999999999 33;@;@[ ;iø;A"0.3;B[ ;!"	rgba;iø;@;!"box-shadow;iø;[ ;:T;1i o;+;@;,["	form;@;i¿;[o;-;o;6
+;$;%;"inline;@;7;8;i¡;@;/;0;@;!["display;i¡;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".search_box;@;i√;[o;-;o;2;$;%;@;3;4;5o;2;$;%;@;3;4;5o;6
+;$;%;"helvetica;@;7;8;iƒ;iƒ;9o;6
+;$;%;"
+arial;@;7;8;iƒ;iƒ;9o;6
+;$;%;"sans-serif;@;7;8;iƒ;@;/;0;@;!["font-family;iƒ;[ ;1i o;-;o;?;$;%;i;@;@["px;i≈;A"	13px;B[ ;@;/;0;@;!["font-size;i≈;[ ;1i o;-;o;?;$;%;i ;@;@["px;i∆;A"0px;B[ ;@;/;0;@;!["border;i∆;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i«;A"1px;B[ ;i«;9o;6
+;$;%;"
+solid;@;7;8;i«;i«;9o;#
+;$;%;0;@;i«;&{	;'i¡;(i;)i¡;*i¡;@;/;0;@;!["border-right;i«;[ ;1i o;-;o;#
+;$;%;0;@;i»;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background-color;i»;[ ;1i o;-;o;6
+;$;%;"absolute;@;7;8;i…;@;/;0;@;!["position;i…;[ ;1i o;-;o;?;$;%;i ;@;@["px;i ;A"0px;B[ ;@;/;0;@;!["	left;i ;[ ;1i o;-;o;?;$;%;i
+;@;@["px;iÀ;A"
+266px;B[ ;@;/;0;@;!["
+width;iÀ;[ ;1i o;-;o;?;$;%;i;@;@["px;iÃ;A"	25px;B[ ;@;/;0;@;!["height;iÃ;[ ;1i o;-;o;?;$;%;i;@;@["px;iÕ;A"6px;B[ ;@;/;0;@;!["padding-left;iÕ;[ ;1i ;:T;1i o;+;@;,[".search_submit;@;iœ;[o;-;o;?;$;%;i ;@;@["px;i–;A"0px;B[ ;@;/;0;@;!["border;i–;[ ;1i o;-;o;2;$;%;@;3;>;5o;;
+;$;%;@;<[o;6
+;$;%;"#../../images/search-button.png;@;7;=;i—;!"url;i—;i—;9o;6
+;$;%;"no-repeat;@;7;8;i—;@;/;0;@;!["background;i—;[ ;1i o;-;o;6
+;$;%;"absolute;@;7;8;i“;@;/;0;@;!["position;i“;[ ;1i o;-;o;?;$;%;i;@;@["px;i”;A"
+273px;B[ ;@;/;0;@;!["	left;i”;[ ;1i o;-;o;?;$;%;i;@;@["px;i‘;A"	25px;B[ ;@;/;0;@;!["height;i‘;[ ;1i o;-;o;?;$;%;i ;@;@["px;i’;A"	27px;B[ ;@;/;0;@;!["
+width;i’;[ ;1i o;-;o;6
+;$;%;"pointer;@;7;8;i÷;@;/;0;@;!["cursor;i÷;[ ;1i ;:T;1i o;;T;"// FLASH-MESSAGES;@;@;[ ;iŸ;[ o;+;@;,[".flash;@;i€;[
+o;+;@;,[".message;@;i‹;[	o;C;@;<[o;?;$;%;i;@;@["px;i›;A"6px;B[ ;@;!"rounded-corners;i›;[ o;-;o;6
+;$;%;"center;@;7;8;iﬁ;@;/;0;@;!["text-align;iﬁ;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i ;@;@[ ;iﬂ;A"0;B[ ;iﬂ;9o;6
+;$;%;"	auto;@;7;8;iﬂ;iﬂ;9o;?;$;%;i;@;@["px;iﬂ;A"	15px;B[ ;@;/;0;@;!["margin;iﬂ;[ ;1i o;+;@;,["p;@;i‡;[o;-;o;?;$;%;i;@;@["px;i·;A"8px;B[ ;@;/;0;@;!["margin;i·;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".error, .error-list;@;i„;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i‰;A"1px;B[ ;i‰;9o;6
+;$;%;"
+solid;@;7;8;i‰;i‰;9o;#
+;$;%;0;@;i‰;&{	;'iˇ;(i;)iª;*iª;@;/;0;@;!["border;i‰;[ ;1i o;-;o;#
+;$;%;0;@;iÂ;&{	;'iˇ;(i;)i›;*i›;@;/;0;@;!["background-color;iÂ;[ ;1i ;:T;1i o;+;@;,[".warning;@;iÁ;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iË;A"1px;B[ ;iË;9o;6
+;$;%;"
+solid;@;7;8;iË;iË;9o;.	;$;%;@;!"interactive_yellow;iË;@;/;0;@;!["border;iË;[ ;1i o;-;o;#
+;$;%;0;@;iÈ;&{	;'iˇ;(i;)iˇ;*iÃ;@;/;0;@;!["background-color;iÈ;[ ;1i ;:T;1i o;+;@;,[".notice;@;iÎ;[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;iÏ;A"1px;B[ ;iÏ;9o;6
+;$;%;"
+solid;@;7;8;iÏ;iÏ;9o;#
+;$;%;0;@;iÏ;&{	;'i$;(i;)iﬂ;*i ;@;/;0;@;!["border;iÏ;[ ;1i o;-;o;#
+;$;%;0;@;iÌ;&{	;'iª;(i;)iˇ;*i∂;@;/;0;@;!["background-color;iÌ;[ ;1i ;:T;1i o;+;@;,[".error-list;@;iÔ;[o;-;o;6
+;$;%;"	left;@;7;8;i;@;/;0;@;!["text-align;i;[ ;1i o;+;@;,["h2;@;iÒ;[o;-;o;?;$;%;i;@;@["px;iÚ;A"	16px;B[ ;@;/;0;@;!["font-size;iÚ;[ ;1i o;-;o;6
+;$;%;"center;@;7;8;iÛ;@;/;0;@;!["text-align;iÛ;[ ;1i ;:T;1i o;+;@;,["ul;@;iÙ;[	o;-;o;?;$;%;i;@;@["px;iı;A"	22px;B[ ;@;/;0;@;!["padding-left;iı;[ ;1i o;-;o;?;$;%;i;@;@["px;iˆ;A"	18px;B[ ;@;/;0;@;!["line-height;iˆ;[ ;1i o;-;o;6
+;$;%;"square;@;7;8;i˜;@;/;0;@;!["list-style-type;i˜;[ ;1i o;-;o;?;$;%;i;@;@["px;i¯;A"	15px;B[ ;@;/;0;@;!["margin-bottom;i¯;[ ;1i ;:T;1i ;:T;1i ;:T;1i o;;T;"// LISTS;@;@;[ ;i˚;[ o;+;@;,["ul.list li;@;i˝;[
+o;-;o;.	;$;%;@;!"light_grey;i˛;@;/;0;@;!["border-bottom-color;i˛;[ ;1i o;-;o;?;$;%;i;@;@["px;iˇ;A"1px;B[ ;@;/;0;@;!["border-bottom-width;iˇ;[ ;1i o;-;o;6
+;$;%;"
+solid;@;7;8;i ;@;/;0;@;!["border-bottom-style;i ;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corners;i;[ o;+;@;,[".item .avatar;@;i;[	o;-;o;.	;$;%;@;!"light_grey;i;@;/;0;@;!["border-color;i;[ ;1i o;-;o;?;$;%;i;@;@["px;i;A"1px;B[ ;@;/;0;@;!["border-width;i;[ ;1i o;-;o;6
+;$;%;"
+solid;@;7;8;i;@;/;0;@;!["border-style;i;[ ;1i o;-;o;?;$;%;i;@;@["px;i;A"2px;B[ ;@;/;0;@;!["padding;i;[ ;1i ;:T;1i ;:T;1i o;;T;"// BOX;@;@;[ ;i
+;[ o;+;@;,["	#box;@;i;[o;-;o;?;$;%;i‡;@;@["px;i;A"
+480px;B[ ;@;/;0;@;!["
+width;i;[ ;1i o;+;@;,[".block;@;i;[	o;-;o;#
+;$;%;0;@;i;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["background;i;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i;@;@["px;i;A"1px;B[ o;?;$;%;i;@;@["px;i;A"3px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;i ;@;@[ ;i;A"0;B[ o;?;$;%;f0.40000000000000002 ôö;@;@[ ;i;A"0.4;B[ ;!"	rgba;i;@;!"box-shadow;i;[ o;C;@;<[o;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corners;i;[ o;+;@;,["h2;@;i;[	o;-;o;.	;$;%;@;!"
+black;i;@;/;0;@;!["background;i;[ ;1i o;-;o;#
+;$;%;0;@;i;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;i;[ ;1i o;C;@;<[o;6
+;$;%;"top;@;7;8;io;6
+;$;%;"	left;@;7;8;io;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corner;i;[ o;C;@;<[o;6
+;$;%;"top;@;7;8;io;6
+;$;%;"
+right;@;7;8;io;?;$;%;i;@;@["px;i;A"9px;B[ ;@;!"rounded-corner;i;[ ;:T;1i ;:T;1i ;:T;1i o;;T;"//  BUTTONS;@;@;[ ;i;[ o;+;@;,["a.button, button.button;@;i;[o;-;o;;
+;$;%;@;<[o;6
+;$;%;"'../../images/button-background.png;@;7;=;i;!"url;i;@;/;0;@;!["background-image;i;[ ;1i o;-;o;#
+;$;%;0;@;i;&{	;'iÓ;(i;)iÓ;*iÓ;@;/;0;@;!["background-color;i;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i;A"1px;B[ ;i;9o;6
+;$;%;"
+solid;@;7;8;i;i;9o;#
+;$;%;0;@;i;&{	;'i√;(i;)iƒ;*i∫;@;/;0;@;!["border;i;[ ;1i o;-;o;2;$;%;@;3;4;5o;2;$;%;@;3;4;5o;6
+;$;%;"helvetica;@;7;8;i ;i ;9o;6
+;$;%;"
+arial;@;7;8;i ;i ;9o;6
+;$;%;"sans-serif;@;7;8;i ;@;/;0;@;!["font-family;i ;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i!;@;/;0;@;!["font-weight;i!;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i";A"2px;B[ ;@;!"rounded-corners;i";[ o;+;@;,[")&:link, &:visited, &:hover, &:active;@;i$;[o;-;o;6
+;$;%;"normal;@;7;8;i%;@;/;0;@;!["font-weight;i%;[ ;1i ;:T;1i o;+;@;,["&:hover;@;i';[o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i(;A"1px;B[ ;i(;9o;6
+;$;%;"
+solid;@;7;8;i(;i(;9o;.	;$;%;@;!"dark_grey;i(;@;/;0;@;!["border;i(;[ ;1i o;C;@;<[	o;?;$;%;i ;@;@[ ;i);A"0;B[ o;?;$;%;i ;@;@[ ;i);A"0;B[ o;?;$;%;i	;@;@["px;i);A"4px;B[ o;;
+;$;%;@;<[	o;?;$;%;i ;@;@[ ;i);A"0;B[ o;?;$;%;i ;@;@[ ;i);A"0;B[ o;?;$;%;i ;@;@[ ;i);A"0;B[ o;?;$;%;f0.29999999999999999 33;@;@[ ;i);A"0.3;B[ ;!"	rgba;i);@;!"box-shadow;i);[ ;:T;1i ;:T;1i o;+;@;,["*a.button:active, button.button:active;@;i+;[o;;T;"!// quando se clica no bot√£o;@;@;[ ;i,;[ o;-;o;;
+;$;%;@;<[o;6
+;$;%;".../../images/button-background-active.png;@;7;=;i-;!"url;i-;@;/;0;@;!["background-image;i-;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;i.;@;/;0;@;!["outline;i.;[ ;1i ;:T;1i o;+;@;,["a.global_button;@;i1;[o;;T;"// bot√£o global do bloco;@;@;[ ;i2;[ o;+;@;,[")&:link, &:visited, &:hover, &:active;@;i3;[o;-;o;#
+;$;%;0;@;i4;&{	;'i';(i;)i';*i';@;/;0;@;!["
+color;i4;[ ;1i o;-;o;6
+;$;%;"
+block;@;7;8;i5;@;/;0;@;!["display;i5;[ ;1i o;-;o;?;$;%;i;@;@["em;i6;A"1em;B[ ;@;/;0;@;!["font-size;i6;[ ;1i o;-;o;?;$;%;f1.3 ÃÕ;@;@["em;i7;A"
+1.3em;B[ ;@;/;0;@;!["line-height;i7;[ ;1i o;-;o;6
+;$;%;"pointer;@;7;8;i8;@;/;0;@;!["cursor;i8;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;i9;@;/;0;@;!["font-weight;i9;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;i:;@;/;0;@;!["text-decoration;i:;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;i;;@;/;0;@;!["
+float;i;;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i;@;@["px;i<;A"8px;B[ ;i<;9o;?;$;%;i;@;@["px;i<;A"	10px;B[ ;i<;9o;?;$;%;i;@;@["px;i<;A"6px;B[ ;i<;9o;?;$;%;i;@;@["px;i<;A"7px;B[ ;@;/;0;@;!["padding;i<;[ ;1i o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i ;@;@[ ;i=;A"0;B[ ;i=;9o;?;$;%;i;@;@["px;i=;A"9px;B[ ;i=;9o;?;$;%;i ;@;@[ ;i=;A"0;B[ ;i=;9o;?;$;%;i ;@;@[ ;i=;A"0;B[ ;@;/;0;@;!["margin;i=;[ ;1i o;C;@;<[o;?;$;%;i;@;@["px;i>;A"2px;B[ ;@;!"rounded-corners;i>;[ ;:T;1i o;+;@;,["img;@;i@;[
+o;-;o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;2;$;%;@;3;>;5o;?;$;%;i ;@;@[ ;iA;A"0;B[ ;iA;9o;?;$;%;i;@;@["px;iA;A"3px;B[ ;iA;9o;?;$;%;i¯;@;@["px;iA;A"	-3px;B[ ;iA;9o;?;$;%;i ;@;@[ ;iA;A"0;B[ ;iA;9o;.	;$;%;@;!"important;iA;@;/;0;@;!["margin;iA;[ ;1i o;-;o;?;$;%;i ;@;@[ ;iB;A"0;B[ ;@;/;0;@;!["padding;iB;[ ;1i o;-;o;6
+;$;%;"	none;@;7;8;iC;@;/;0;@;!["border;iC;[ ;1i o;-;o;?;$;%;i;@;@["px;iD;A"	16px;B[ ;@;/;0;@;!["
+width;iD;[ ;1i o;-;o;?;$;%;i;@;@["px;iE;A"	16px;B[ ;@;/;0;@;!["height;iE;[ ;1i ;:T;1i ;:T;1i o;;T;"// FORMS;@;@;[ ;iH;[ o;+;@;,[".form div;@;iJ;[o;+;@;,["&.left;@;iK;[o;-;o;?;$;%;i;@;@["%;iL;A"10%;B[ ;@;/;0;@;!["
+width;iL;[ ;1i o;-;o;6
+;$;%;"	left;@;7;8;iM;@;/;0;@;!["
+float;iM;[ ;1i ;:T;1i o;+;@;,["&.right;@;iN;[o;-;o;?;$;%;iZ;@;@["%;iO;A"85%;B[ ;@;/;0;@;!["
+width;iO;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;iP;@;/;0;@;!["
+float;iP;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".login div;@;iR;[o;;T;"// formul√°rio para login;@;@;[ ;iS;[ o;+;@;,["&.left;@;iT;[o;-;o;?;$;%;i;@;@["%;iU;A"21%;B[ ;@;/;0;@;!["
+width;iU;[ ;1i o;-;o;6
+;$;%;"	left;@;7;8;iV;@;/;0;@;!["
+float;iV;[ ;1i ;:T;1i o;+;@;,["&.right;@;iW;[o;-;o;?;$;%;iO;@;@["%;iX;A"74%;B[ ;@;/;0;@;!["
+width;iX;[ ;1i o;-;o;6
+;$;%;"
+right;@;7;8;iY;@;/;0;@;!["
+float;iY;[ ;1i ;:T;1i ;:T;1i o;+;@;,[".signup div;@;i[;[o;;T;"// formul√°rio para signup;@;@;[ ;i\;[ o;D
+;E[".login;@;@;i];[ ;:T;1i o;;T;"// ICONS FILETYPES;@;@;[ ;i`;[ o;+;@;,[".filetype;@;ib;[o;-;o;;
+;$;%;@;<[o;6
+;$;%;")../../../images/filetype/unknown.png;@;7;=;ic;!"url;ic;@;/;0;@;!["background-image;ic;[ ;1i o;-;o;6
+;$;%;"no-repeat;@;7;8;id;@;/;0;@;!["background-repeat;id;[ ;1i o;-;o;?;$;%;i;@;@["px;ie;A"9px;B[ ;@;/;0;@;!["padding-top;ie;[ ;1i o;-;o;?;$;%;i;@;@["px;if;A"	11px;B[ ;@;/;0;@;!["padding-left;if;[ ;1i o;-;o;?;$;%;i;@;@["px;ig;A"	14px;B[ ;@;/;0;@;!["font-size;ig;[ ;1i o;-;o;.	;$;%;@;!"	grey;ih;@;/;0;@;!["
+color;ih;[ ;1i o;-;o;?;$;%;ii;@;@["px;ii;A"
+100px;B[ ;@;/;0;@;!["
+width;ii;[ ;1i o;-;o;?;$;%;iÄ;@;@["px;ij;A"
+128px;B[ ;@;/;0;@;!["height;ij;[ ;1i ;:T;1i o;;T;",// Informa√ß√£o adicional para t√≠tulos;@;@;[ ;im;[ o;+;@;,[".highlighted-title-info;@;io;[o;-;o;6
+;$;%;"inline;@;7;8;ip;@;/;0;@;!["display;ip;[ ;1i o;-;o;?;$;%;i;@;@["px;iq;A"	13px;B[ ;@;/;0;@;!["font-size;iq;[ ;1i o;-;o;6
+;$;%;"top;@;7;8;ir;@;/;0;@;!["vertical-align;ir;[ ;1i o;-;o;?;$;%;i;@;@["px;is;A"3px;B[ ;@;/;0;@;!["padding-left;is;[ ;1i o;-;o;?;$;%;i
+;@;@["px;it;A"5px;B[ ;@;/;0;@;!["padding-right;it;[ ;1i o;-;o;?;$;%;i
+;@;@["px;iu;A"5px;B[ ;@;/;0;@;!["margin-left;iu;[ ;1i o;-;o;6
+;$;%;"normal;@;7;8;iv;@;/;0;@;!["font-weight;iv;[ ;1i o;-;o;6
+;$;%;"lowercase;@;7;8;iw;@;/;0;@;!["text-transform;iw;[ ;1i o;C;@;<[o;?;$;%;i	;@;@["px;ix;A"4px;B[ ;@;!"rounded-corners;ix;[ ;:T;1i o;+;@;,["!.highlighted-title-info-grey;@;iz;[o;D
+;E[".highlighted-title-info;@;@;i{;[ o;-;o;.	;$;%;@;!"	grey;i|;@;/;0;@;!["background-color;i|;[ ;1i o;-;o;#
+;$;%;0;@;i};&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;i};[ ;1i ;:T;1i o;+;@;,["".highlighted-title-info-green;@;i;[o;D
+;E[".highlighted-title-info;@;@;iÄ;[ o;-;o;#
+;$;%;0;@;iÅ;&{	;'i$;(i;)iﬂ;*i ;@;/;0;@;!["background-color;iÅ;[ ;1i o;-;o;#
+;$;%;0;@;iÇ;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;iÇ;[ ;1i ;:T;1i o;+;@;,["#.highlighted-title-info-yellow;@;iÑ;[o;D
+;E[".highlighted-title-info;@;@;iÖ;[ o;-;o;.	;$;%;@;!"yellow;iÜ;@;/;0;@;!["background-color;iÜ;[ ;1i o;-;o;#
+;$;%;0;@;iá;&{	;'i ;(i;)i ;*i ;@;/;0;@;!["
+color;iá;[ ;1i ;:T;1i o;+;@;,[" .highlighted-title-info-red;@;iâ;[o;D
+;E[".highlighted-title-info;@;@;iä;[ o;-;o;.	;$;%;@;!"red;iã;@;/;0;@;!["background-color;iã;[ ;1i o;-;o;#
+;$;%;0;@;iå;&{	;'iˇ;(i;)iˇ;*iˇ;@;/;0;@;!["
+color;iå;[ ;1i ;:T;1i ;:T
