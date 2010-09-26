@@ -27,6 +27,65 @@
                    font-family:Helvetiker,Arial,sans-serif; }
     #content { width:840px; color:#444; }
     #footer { border-bottom: 5px solid lightgrey; margin-top:50px; }
+
+    #test-it { padding: 10px 0 50px 0; }
+    #demo { width:170px; float:left; }
+    #facebook { width:500px; float:left; padding-top:1px; }
+
+    /* Buttons from: http://blog.anomalyinnovations.com/2010/03/creating-a-realistic-looking-button-with-css3 */
+    a.button {
+      font-size: 14px;
+      text-decoration: none;
+      border-color: transparent transparent #ECECEC; /** rgba fallback **/
+      border-color: transparent transparent rgba(255, 255, 255, 0.63);
+      cursor: pointer;
+      outline: none;
+      width: 150px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    a.button:hover {
+      text-decoration: none;
+      border-bottom-color: transparent;
+    }
+    a.button,
+    a.button b.o,
+    a.button b.m {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      display: block;
+    }
+    a.button b.o {
+      border-color: #5A5A5A; /** rgba fallback **/
+      border-color: rgba(0, 0, 0, 0.56);
+    }
+    a.button b.m {
+      background: transparent url(img/button.png) repeat-x 0 0;
+      border-color: #FFF transparent #C7C7C7; /** rgba fallback **/
+      border-color: #FFF rgba(255, 255, 255, 0.33) rgba(255, 255, 255, 0.33);
+    }
+    a.button:hover b.m {
+      background-position: 0 -80px;
+    }
+    a.button:active b.m {
+      background-position: 0 -160px;
+      border-color: #B7B7B7 transparent #D4D4D4; /** rgba fallback **/
+      border-color: rgba(255, 255, 255, 0.11) rgba(255, 255, 255, 0.23) rgba(255, 255, 255, 0.27);
+    }
+    a.button b.m b {
+      display: block;
+      font-weight: bold;
+      padding: 2px 4px;
+      text-shadow: 0 1px 0 #DDD;
+      color: #262626;
+      line-height: 2em;
+      /** Make the text unselectable **/
+      -moz-user-select: none;
+      -webkit-user-select: none;
+    }
   </style>
 
 </head>
@@ -43,6 +102,10 @@
     <!-- Content -->
     <div id="content">
       <div id="description"><p>Activo was originally developed as a theme for the web-app-theme plugin. It was extended and now includes two extra stylesheets - one for formtastic and the other for attrtastic. It also comes with some css for the jQuery library, including the datePicker plugin. You can use only the ones you need. Try the <a href="demo/activo.html">live demo</a> here.</p></div>
+      <div id="test-it">
+      <div id="demo"><a class="button" href="demo/activo.html"><b class="o"><b class="m"><b>Live demo</b></b></b></a></div>
+      <div id="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href=http%3A%2F%2Fdmfrancisco.github.com%2Factivo%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></div>
+      </div>
 
       <p><img src="img/1.jpg" alt="" width="840" height="300" /></p>
       <p><img src="img/2.jpg" alt="" width="840" height="300" /></p>
