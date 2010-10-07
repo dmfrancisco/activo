@@ -6,13 +6,13 @@
 
   <title>activo</title>
 
-  <script src="js/typeface.js"></script>
-	<script src="js/helvetiker_regular.typeface.js"></script>
-	<script src="js/helvetiker_bold.typeface.js"></script>
-	<script src="js/helvetiker_bold_italic.typeface.js"></script>
+  <script type="text/javascript" src="js/typeface.js"></script>
+  <script type="text/javascript" src="js/helvetiker_regular.typeface.js"></script>
+  <script type="text/javascript" src="js/helvetiker_bold.typeface.js"></script>
+  <script type="text/javascript" src="js/helvetiker_bold_italic.typeface.js"></script>
 
   <!-- Some CSS -->
-  <style>
+  <style type="text/css">
     body { font-family:Helvetica,Arial,sans-serif; font-size:10pt; background-color:#fafafa; text-align: center; /* IE */ }
     a    { color: black; }
     p    { margin-top: 7px; margin-bottom: 7px; }
@@ -30,7 +30,6 @@
 
     #test-it { padding: 10px 0 50px 0; }
     #demo { width:170px; float:left; }
-    #facebook { width:500px; float:left; padding-top:1px; }
 
     /* Buttons from: http://blog.anomalyinnovations.com/2010/03/creating-a-realistic-looking-button-with-css3 */
     a.button {
@@ -92,7 +91,7 @@
 
 <body class="typeface-js">
   <!-- Ribbon -->
-  <a href="http://github.com/dmfrancisco/activo"><img style="position:absolute; top:0; right:0; border:0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <a href="http://github.com/dmfrancisco/activo"><img style="position:absolute; top:0; right:0; border:0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
   <div id="container">
 
@@ -101,16 +100,18 @@
 
     <!-- Content -->
     <div id="content">
-      <div id="description"><p>Activo was originally developed as a theme for the web-app-theme plugin. It was extended and now includes two extra stylesheets - one for formtastic and the other for attrtastic. It also comes with some css for the jQuery library, including the datePicker plugin. You can use only the ones you need. Try the <a href="demo/activo.html">live demo</a> here.</p></div>
-      <div id="test-it">
-      <div id="demo"><a class="button" href="demo/activo.html"><b class="o"><b class="m"><b>Live demo</b></b></b></a></div>
-      <div id="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href=http%3A%2F%2Fdmfrancisco.github.com%2Factivo%2F&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></div>
+      <div id="description">
+        <p>Activo was originally developed as a theme for the web-app-theme plugin. It was extended and now includes two extra stylesheets - one for formtastic and the other for attrtastic. It also comes with some css for the jQuery library, including the datePicker plugin. You can use only the ones you need. Try the <a href="demo/activo.html">live demo</a> here.</p>
       </div>
 
-      <p><img src="img/1.jpg" alt="" width="840" height="300" /></p>
-      <p><img src="img/2.jpg" alt="" width="840" height="300" /></p>
-      <p><img src="img/3.jpg" alt="" width="840" height="360" /></p>
-      <p><img src="img/4.jpg" alt="" width="840" height="525" /></p>
+      <div id="test-it">
+        <div id="demo"><a class="button" href="demo/activo.html"><b class="o"><b class="m"><b>Live demo</b></b></b></a></div>
+      </div>
+
+      <p><img src="img/1.jpg" alt="" width="840" height="300"></p>
+      <p><img src="img/2.jpg" alt="" width="840" height="300"></p>
+      <p><img src="img/3.jpg" alt="" width="840" height="360"></p>
+      <p><img src="img/4.jpg" alt="" width="840" height="525"></p>
 
       <p>* <a href="http://github.com/pilu/web-app-theme">Web App Theme</a> is a Rails plugin that generates a complete web application layout.</p>
 
@@ -144,17 +145,19 @@
       <h2>Contact information</h2>
 
       <p>Please email me at
-	    	<script TYPE="text/javascript">
-	    	<!--
-	    		email = ('dmf' + 'rancisc' + '@' + 'gma' + 'il' + '.com')
-	    		document.write(' <a href="mailto:'+ email +'">'+ email +'</a>')
-	    	//-->
-	    	</script>.</p><p class="contact">You can also contact me via <a onClick="return skypeCheck();" href="skype:dmfrancisc?call">skype</a>.</p>
+        <script TYPE="text/javascript">
+        <!--
+          email = ('dmf' + 'rancisc' + '@' + 'gma' + 'il' + '.com')
+          document.write(' <a href="mailto:'+ email +'">'+ email +'</a>')
+        //-->
+        </script>.
+      </p>
+      <p class="contact">You can also contact me via <a onClick="return skypeCheck();" href="skype:dmfrancisc?call">skype</a>.</p>
 
 
-    <div id="footer">
-      <p>Copyright &copy; 2010 David Francisco, released under the MIT license.</p>
-    </div>
+      <div id="footer">
+        <p>Copyright &copy; 2010 David Francisco, released under the MIT license.</p>
+      </div>
     </div>
   </div>
 
