@@ -18,10 +18,10 @@ $(document).ready(function()
 jQuery(function( $ )
 {
 	$('a').click(function() {
-	   if ($(this).get(0).id == 'anchor') {
-		 $.scrollTo(this.hash, 500);
-		 $(this.hash).find('span.message').text(this.href);
-		 return false;
+	   if ($(this).attr('class') == 'anchor') {
+		   $.scrollTo(this.hash, 500);
+		   $(this.hash).find('span.message').text(this.href);
+		   return false;
 	   }
 	});
 });
