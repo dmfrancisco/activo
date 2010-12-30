@@ -39,7 +39,9 @@ p. Please email me at "dmfrancisc@gmail.com":mailto:dmfrancisc@gmail.com
 
 h2. Credits
 
-p. Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/
+p. Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/ and "Evan Brooks":http://brsev.com/ - "Token icon set":http://brsev.deviantart.com/art/Token-128429570
+
 p. Buttons by "Particletree":http://particletree.com/ - "Rediscovering the Button Element":http://particletree.com/features/rediscovering-the-button-element/
+
 
 p. 2010 David Francisco, released under the MIT license.
