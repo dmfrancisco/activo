@@ -1,3 +1,6 @@
+h1. Activo is a customizable theme for your web application
+
+p. _Be sure to also check the "activo-2 branch":https://github.com/dmfrancisco/activo/tree/activo-2_
 
 p. Activo was originally developed as a theme for the web-app-theme plugin. It was extended and now includes two extra stylesheets - one for formtastic and the other for attrtastic. It also comes with some css for the jQuery library, including the datePicker plugin. You can use only the ones you need. "Click here for more screenshots":http://dmfrancisco.github.com/activo or try the "live demo":http://dmfrancisco.github.com/activo/demo/activo.html here.
 
