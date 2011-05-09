@@ -2,42 +2,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>activo demo</title>
 
-  <link rel="stylesheet" href="stylesheets/jquery-ui.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="stylesheets/base.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="stylesheets/jquery.tipsy.css" media="screen"type="text/css" />
-  <link rel="stylesheet" id="current-theme" href="stylesheets/activo/activo.css" type="text/css" media="screen" />
-  <!--[if IE]>
-    <link href="stylesheets/activo/activo-ie.css" media="screen" rel="stylesheet" type="text/css" />
-  <![endif]-->
+  <title>ACTIVO / full preview</title>
 
-  <link rel="stylesheet" href="stylesheets/activo-attrtastic/attrtastic_changes.css" media="screen" type="text/css" />
-  <link rel="stylesheet" href="stylesheets/activo-formtastic/formtastic.css" media="screen" type="text/css" />
-  <link rel="stylesheet" href="stylesheets/activo-formtastic/formtastic_changes.css" media="screen" type="text/css" />
+  <link rel="shortcut icon" href="http://activo.dmfranc.com/favicon.png">
 
-  <script type="text/javascript" charset="utf-8" src="javascripts/jquery-1.3.min.js"></script>
-  <script type="text/javascript" charset="utf-8" src="javascripts/jquery-ui.min.js"></script>
-  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.scrollTo.js"></script>
-  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.localscroll.js"></script>
-  <script type="text/javascript" charset="utf-8" src="javascripts/application.js"></script>
-  <script type="text/javascript" charset="utf-8" src="javascripts/jquery.tipsy.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/base.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/formtastic.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/jquery.tipsy.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/uniform.default.css" />
 
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/themes/activo/style.css" id="current-theme" />
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.scrollTo.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.localscroll.js"></script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.tipsy.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.uniform.min.js"></script>
+
+  <!-- Theme selector (based on the script of the web-app-theme demo page) -->
+  <script type="text/javascript"> 
+    // <![CDATA[
+    var Theme = {
+      activate: function(name) {
+        window.location.hash = 'themes/' + name
+        Theme.loadCurrent();
+      },
+ 
+      loadCurrent: function() {
+        var hash = window.location.hash;
+        if (hash.length > 0) {
+          matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
+          if (matches && matches.length > 1) {
+            $('#current-theme').attr('href', 'stylesheets/themes/' + matches[1] + '/style.css');
+            $("img").each(function (i) {
+              $(this).attr('src', $(this).attr('src').replace(/themes\/([a-z0-9\-_]+)/, '/themes/' + matches[1] + '/'));
+            });
+          } else {
+            alert('theme not valid');
+          }
+        }
+      }
+    }
+    // ]]>
+  </script>
 </head>
 
 <body>
   <div id="container">
     <div id="header">
-      <div id='status'>
-        Hello! You have <a href="#">3 pending notifications</a>
-      </div>
-      <h1><a href="index.html"></a></h1>
+      <h1></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
-          <li><a href="#"><img src="images/session/home.png"    title="Dashboard"   alt="Dashboard" /></a></li>
-          <li><a href="#"><img src="images/session/account.png" title="Profile"     alt="Profile" /></a></li>
-          <li><a href="#"><img src="images/session/config.png"  title="Preferences" alt="Preferences" /></a></li>
-          <li><a href="#"><img src="images/session/logout.png"  title="Logout"      alt="Logout" /></a></li>
+          <li><a href="#"><img src="stylesheets/themes/activo/images/session/home.png"    title="Dashboard"   alt="Dashboard" /></a></li>
+          <li><a href="#"><img src="stylesheets/themes/activo/images/session/account.png" title="Profile"     alt="Profile" /></a></li>
+          <li><a href="#"><img src="stylesheets/themes/activo/images/session/config.png"  title="Preferences" alt="Preferences" /></a></li>
+          <li><a href="#"><img src="stylesheets/themes/activo/images/session/logout.png"  title="Logout"      alt="Logout" /></a></li>
         </ul>
       </div>
       <div id="main-navigation">
@@ -69,7 +92,7 @@
           <div class="content">
             <div class="control">
               <a class="button" href="#">
-                 <img src="images/icons/edit.png" alt="Edit" /> Edit
+                 <img src="stylesheets/themes/activo/images/icons/edit.png" alt="Edit" /> Edit
               </a>
             </div>
             <h2 class="title">Text</h2>
@@ -111,10 +134,10 @@
           <div class="content">
             <div class="control">
               <a class="button" href="#">
-                 <img src="images/icons/add.png" alt="Add" /> Add
+                 <img src="stylesheets/themes/activo/images/icons/add.png" alt="Add" /> Add
               </a>
               <a class="button" href="#">
-                 <img src="images/icons/delete.png" alt="Remove" /> Remove
+                 <img src="stylesheets/themes/activo/images/icons/delete.png" alt="Remove" /> Remove
               </a>
             </div>
             <h2 class="title">Tables</h2>
@@ -132,34 +155,34 @@
                   <tr class="odd">
                     <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>1</td><td>hulk</td><td>Hulk</td><td>Hogan</td>
                     <td class='last'>
-                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
-                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
-                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                      <a href="#"><img alt="Show" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src="stylesheets/themes/activo/images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'" src="stylesheets/themes/activo/images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'" src="stylesheets/themes/activo/images/icons/24/download.png" title="Download" /></a>
                     </td>
 
                   </tr>
                   <tr class="even">
                     <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>2</td><td>ultimate</td><td>Ultimate</td><td>Warrior</td>
                     <td class='last'>
-                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
-                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
-                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                      <a href="#"><img alt="Show" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src="stylesheets/themes/activo/images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'" src="stylesheets/themes/activo/images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'" src="stylesheets/themes/activo/images/icons/24/download.png" title="Download" /></a>
                     </td>
                   </tr>
                   <tr class="odd">
                     <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>3</td><td>andre</td><td>Andre</td><td>The Giant</td>
                     <td class='last'>
-                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
-                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
-                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                      <a href="#"><img alt="Show" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src="stylesheets/themes/activo/images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'" src="stylesheets/themes/activo/images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'" src="stylesheets/themes/activo/images/icons/24/download.png" title="Download" /></a>
                     </td>
                   </tr>
                   <tr class="even">
                     <td><input type="checkbox" class="checkbox" name="id" value="1" /></td><td>4</td><td>machoman</td><td>Macho Man</td><td>Randy Savage</td>
                     <td class='last'>
-                      <a href="#"><img alt="Show" onmouseout="this.src='images/icons/24/show.png'" onmouseover="this.src='images/icons/24/show-hover.png?1279417407'" src="images/icons/24/show.png" title="Show" /></a>
-                      <a href="#"><img alt="Edit" onmouseout="this.src='images/icons/24/edit.png'" onmouseover="this.src='images/icons/24/edit-hover.png'" src="images/icons/24/edit.png" title="Edit" /></a>
-                      <a href="#"><img alt="Download" onmouseout="this.src='images/icons/24/download.png'" onmouseover="this.src='images/icons/24/download-hover.png'" src="images/icons/24/download.png" title="Download" /></a>
+                      <a href="#"><img alt="Show" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src="stylesheets/themes/activo/images/icons/24/show.png" title="Show" /></a>
+                      <a href="#"><img alt="Edit" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'" src="stylesheets/themes/activo/images/icons/24/edit.png" title="Edit" /></a>
+                      <a href="#"><img alt="Download" onmouseout="this.src='stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'" src="stylesheets/themes/activo/images/icons/24/download.png" title="Download" /></a>
                     </td>
                   </tr>
                 </table>
@@ -203,7 +226,7 @@
               Cicero
             </h2>
             <div class="control" style='margin-top:-7px; margin-right:8px;'>
-              <a href="#" class="button"><img alt="Export" src="images/icons/pdf.png" /> Export list</a>
+              <a href="#" class="button"><img alt="Export" src="stylesheets/themes/activo/images/icons/pdf.png" /> Export list</a>
             </div>
             <div class='inner'>
               <h3 class='title'>
@@ -231,7 +254,7 @@
                   <td>8</td>
                   <td>-</td>
                   <td class='last'>
-                    <a href="#tempore" class="anchor"><img onmouseout="this.src='images/icons/24/anchor.png'" onmouseover="this.src='images/icons/24/anchor-hover.png'" src="images/icons/24/anchor.png" title="Malorum" alt="Malorum" /></a>
+                    <a href="#tempore" class="anchor"><img onmouseout="this.src='stylesheets/themes/activo/images/icons/24/anchor.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/anchor-hover.png'" src="stylesheets/themes/activo/images/icons/24/anchor.png" title="Malorum" alt="Malorum" /></a>
                   </td>
                 </tr>
                 <tr class='odd'>
@@ -244,7 +267,7 @@
                   <td>0</td>
                   <td>-</td>
                   <td class='last'>
-                    <a href="#tempore" class="anchor"><img onmouseout="this.src='images/icons/24/anchor.png'" onmouseover="this.src='images/icons/24/anchor-hover.png'" src="images/icons/24/anchor.png" title="Malorum" alt="Malorum" /></a>
+                    <a href="#tempore" class="anchor"><img onmouseout="this.src='stylesheets/themes/activo/images/icons/24/anchor.png'" onmouseover="this.src='stylesheets/themes/activo/images/icons/24/anchor-hover.png'" src="stylesheets/themes/activo/images/icons/24/anchor.png" title="Malorum" alt="Malorum" /></a>
                   </td>
                 </tr>
                 <tr class='even'>
@@ -261,8 +284,8 @@
               </table>
             </div>
             <div class="control" style='margin-top:2px; margin-right:8px;'>
-              <a href="#" class="button"><img src="images/icons/add.png" alt="Add item" /> Add item</a>
-              <a href="#" class="button"><img src="images/icons/send-mail.png" alt="Send email" /> Send email</a>
+              <a href="#" class="button"><img src="stylesheets/themes/activo/images/icons/add.png" alt="Add item" /> Add item</a>
+              <a href="#" class="button"><img src="stylesheets/themes/activo/images/icons/send-mail.png" alt="Send email" /> Send email</a>
             </div>
             <div class='inner'>
               <h3 class='title'>
@@ -325,7 +348,7 @@
           <div class="content">
             <div class="control">
               <a class="button" href="#">
-                 <img src="images/icons/show.png" alt="Show" /> Show
+                 <img src="stylesheets/themes/activo/images/icons/show.png" alt="Show" /> Show
               </a>
             </div>
             <h2 class="title">Forms</h2>
@@ -348,12 +371,16 @@
                   <textarea class="text_area" rows="10" cols="80"></textarea>
                   <span class="description">Write here a long text</span>
                 </div>
+                <div class="group">
+                  <label class="label">Upload a file</label>
+                  <input type="file" />
+                </div>
                 <div class="group navform wat-cf">
                   <button class="button" type="submit">
-                    <img src="images/icons/tick.png" alt="Save" /> Save
+                    <img src="stylesheets/themes/activo/images/icons/tick.png" alt="Save" /> Save
                   </button>
                   <a href="#header" class="button">
-                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                    <img src="stylesheets/themes/activo/images/icons/cross.png" alt="Cancel"/> Cancel
                   </a>
                 </div>
               </form>
@@ -449,10 +476,10 @@
                 </div>
                 <div class="group navform wat-cf">
                   <button class="button" type="submit">
-                    <img src="images/icons/tick.png" alt="Save" /> Save
+                    <img src="stylesheets/themes/activo/images/icons/tick.png" alt="Save" /> Save
                   </button>
                   <a href="#header" class="button">
-                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                    <img src="stylesheets/themes/activo/images/icons/cross.png" alt="Cancel"/> Cancel
                   </a>
                 </div>
               </form>
@@ -477,21 +504,8 @@
           </div>
           <div class='content'>
             <div class="control">
-              <a class="button" href="#" id="more_link" onclick="try {
-                jQuery(&quot;#details&quot;).toggle();
-                jQuery(&quot;#less_link&quot;).show();
-                jQuery(&quot;#more_link&quot;).hide();
-              } catch (e) { alert('RJS error'); throw e }; return false;">
-              <img alt="See-more" src="images/icons/see-more.png" /> Show more</a>
-              <a class="button" href="#" id="less_link" onclick="try {
-                jQuery(&quot;#details&quot;).toggle();
-                jQuery(&quot;#less_link&quot;).hide();
-                jQuery(&quot;#more_link&quot;).show();
-              } catch (e) { alert('RJS error'); throw e }; return false;" style="display:none;">
-              <img alt="See-less" src="images/icons/see-less.png" /> Show less</a>
-
-              <a href="#" class="button"><img src="images/icons/pdf.png" alt="Export" /> Export</a>
-              <a href="#" class="button"><img src="images/icons/application_edit.png" alt="Edit" /> Edit</a>
+              <a href="#" class="button"><img src="stylesheets/themes/activo/images/icons/pdf.png" alt="Export" /> Export</a>
+              <a href="#" class="button"><img src="stylesheets/themes/activo/images/icons/application_edit.png" alt="Edit" /> Edit</a>
             </div>
             <h2 class='title'>
               <a href="http://github.com/MBO/attrtastic">Attrtastic</a> integration
@@ -538,26 +552,24 @@
                     <li class="attribute"><span class="label">Pariatur</span><span class="value">Excepteur sint occaecat cupidatat non proident</span></li>
                   </ol>
                 </div>
-                <div id='details' style='display: none'>
+                <div class="attributes">
+                  <ol><hr /></ol>
+                </div>
+                <div class='column_left'>
                   <div class="attributes">
-                    <ol><hr /></ol>
+                    <ol>
+                      <li class="attribute"><span class="label">Sunt in culpa</span><span class="value">Irure dolor</span></li>
+                      <li class="attribute"><span class="label">Deserunt mollit</span><span class="value">Fugiat nulla</span></li>
+                    </ol>
                   </div>
-                  <div class='column_left'>
-                    <div class="attributes">
-                      <ol>
-                        <li class="attribute"><span class="label">Sunt in culpa</span><span class="value">Irure dolor</span></li>
-                        <li class="attribute"><span class="label">Deserunt mollit</span><span class="value">Fugiat nulla</span></li>
-                      </ol>
-                    </div>
-                  </div>
-                  <div class='column_right'>
-                    <div class="attributes">
-                      <ol>
-                        <li class="attribute"><span class="label">Laborum</span><span class="value">Voluptate</span></li>
-                        <li class="attribute"><span class="label">Consequat</span><span class="value">Velit</span></li>
-                        <li class="attribute"><span class="label">Reprehenderit</span><span class="value">Cillum dolore</span></li>
-                      </ol>
-                    </div>
+                </div>
+                <div class='column_right'>
+                  <div class="attributes">
+                    <ol>
+                      <li class="attribute"><span class="label">Laborum</span><span class="value">Voluptate</span></li>
+                      <li class="attribute"><span class="label">Consequat</span><span class="value">Velit</span></li>
+                      <li class="attribute"><span class="label">Reprehenderit</span><span class="value">Cillum dolore</span></li>
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -584,7 +596,7 @@
           <div class='content'>
             <h2 class='title'>
               <a href="http://github.com/justinfrench/formtastic">Formtastic</a>
-              <div class='highlighted-title-info-grey'>with date picker</div>
+              <div class='badge-grey'>with date picker</div>
             </h2>
             <div class='inner'>
               <form action="#" class="formtastic example" method="post">
@@ -618,7 +630,7 @@
                 </fieldset>
                 <fieldset class="column_right">
                   <ol>
-                    <li class="string optional" id="example_mandamus_input"><label for="example_mandamus">Mandamus</label><input id="example_mandamus" maxlength="255" name="example[mandamus]" size="50" type="text" value="" /></li>
+                    <li class="string optional" id="example_mandamus_input"><label for="example_mandamus">Mandamus</label><input id="example_mandamus" maxlength="255" name="example[mandamus]" size="50" type="text" disabled="disabled" value="" /></li>
                     <li class="datepicker optional" id="example_consectetuer_input"><label for="example_consectetuer">Consectetuer</label><input class="ui-datepicker" id="example_consectetuer" name="example[consectetuer]" size="50" type="text" /></li>
                   </ol>
                 </fieldset>
@@ -641,10 +653,10 @@
                 </fieldset>
                 <div class="group navform wat-cf">
                   <button class="button" type="submit">
-                    <img src="images/icons/tick.png" alt="Save" /> Save
+                    <img src="stylesheets/themes/activo/images/icons/tick.png" alt="Save" /> Save
                   </button>
                   <a href="#header" class="button">
-                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+                    <img src="stylesheets/themes/activo/images/icons/cross.png" alt="Cancel"/> Cancel
                   </a>
                 </div>
               </form>
@@ -673,7 +685,7 @@
               <ul class="list">
                 <li>
                   <div class="left">
-                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                    <a href="#"><img class="avatar" src="stylesheets/themes/activo/images/avatar.png" alt="avatar" /></a>
                   </div>
                   <div class="item">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -681,7 +693,7 @@
                 </li>
                 <li>
                   <div class="left">
-                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                    <a href="#"><img class="avatar" src="stylesheets/themes/activo/images/avatar.png" alt="avatar" /></a>
                   </div>
                   <div class="item">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -689,7 +701,7 @@
                 </li>
                 <li>
                   <div class="left">
-                    <a href="#"><img class="avatar" src="images/avatar.png" alt="avatar" /></a>
+                    <a href="#"><img class="avatar" src="stylesheets/themes/activo/images/avatar.png" alt="avatar" /></a>
                   </div>
                   <div class="item">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -700,11 +712,19 @@
           </div>
         </div>
         <div id="footer">
-          <p>Copyright &copy; 2010 Your Site.</p>
+          <p>David Francisco / hello@dmfranc.com / activo.dmfranc.com</p>
         </div>
       </div>
       <div id="sidebar">
+        <div class="block"> 
+          <h3>Switch style</h3> 
+          <ul class="navigation"> 
+            <li><a href="#" onclick="Theme.activate('activo'); return false;">Activo 2.0</a></li> 
+            <li><a href="#" onclick="Theme.activate('classic'); return false;">Classic</a></li> 
+          </ul> 
+        </div>
         <div class="block">
+          <h3>Examples</h3> 
           <ul class="navigation">
             <li><a class="anchor" href="#block-text">Text</a></li>
             <li><a class="anchor" href="#block-tables">Tables</a></li>
@@ -721,20 +741,22 @@
           <h4>Notice Title</h4>
           <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
         </div>
-        <div class="block warning">
-          <h4>Warning</h4>
-          <p>Curabitur ultrices, lorem ac aliquam blandit. Aenean tempor venenatis dolor!</p>
-        </div>
         <div class="block">
           <div class="sidebar-block">
-            <h4>Sidebar Inner block Title</h4>
-            <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac <a href="#">aliquam blandit</a>, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
+            <h4>Credits</h4>
+            <p><a href="http://pixelmatrixdesign.com/uniform/">Jquery Uniform</a> - Uniform look and feel of form elements between browsers</p>
+            <p><a href="http://glyphish.com/">Glyphish iconset</a> - Icons of the top-right corner</p>
+            <p><a href="http://gentleface.com/free_icon_set.html">Gentleface Wireframe Toolbar Icons</a> - Logout icon</p>
+            <p><a href="http://www.josbuivenga.demon.nl/museo.html">Museo font</a> - Sans 500, Sans 500 Italic, 700</p>
+            <p><a href="http://dribbble.com/">Dribbble.com</a> - Great place to find inspiration</p>
+            <p><a href="http://p.yusukekamiyamane.com/">Fugue icons</a> - Iconset by Yusuke Kamiyamane</p>
+            <p><a href="http://mynameisraj.com/">Raj Ramamurthy</a> - Made the dropdown menu and helped me with the buttons!</p>
+            <p><a href="http://gravityblast.com/">Andrea Franz</a> - He's the author of the web-app-theme rails plugin</p>
           </div>
         </div>
       </div>
     </div>
     <div id="box">
-      <h1>Web App Theme</h1>
       <div class="block" id="block-login">
         <h2>Login Box</h2>
         <div class="content login">
@@ -749,7 +771,7 @@
                 <label class="label right">Login</label>
               </div>
               <div class="right">
-                <input type="text" class="text_field" value="dmfrancisc@gmail.com" />
+                <input type="text" class="text_field" value="hello@dmfranc.com" />
               </div>
             </div>
             <div class="group wat-cf">
@@ -763,7 +785,7 @@
             <div class="group navform wat-cf">
               <div class="right">
                 <button class="button" type="submit">
-                  <img src="images/icons/key.png" alt="Save" /> Login
+                  <img src="stylesheets/themes/activo/images/icons/key.png" alt="Save" /> Login
                 </button>
               </div>
             </div>
@@ -775,10 +797,10 @@
         <h2>Sign up</h2>
         <div class='secondary-inner-nav'>
           <ul class='wat-cf'>
-            <li class='active'><a href="#">Lorem</a></li>
-            <li><a href="#">Ipsum</a></li>
-            <li><a href="#">Dolor</a></li>
-            <li><a href="#">Sit</a></li>
+            <li class='active'><a href="#">Tabs</a></li>
+            <li><a href="#">For</a></li>
+            <li><a href="#">Different</a></li>
+            <li><a href="#">Roles</a></li>
           </ul>
         </div>
         <div class="content">
@@ -789,7 +811,7 @@
               </div>
               <div class="right">
                 <input type="text" class="text_field" />
-                <span class="description">Ex: web-app-theme</span>
+                <span class="description">Ex: activo</span>
               </div>
             </div>
             <div class="group wat-cf">
@@ -798,14 +820,13 @@
               </div>
               <div class="right">
                 <input type="text" class="text_field" />
-                <span class="description">Ex: test@example.com</span>
+                <span class="description">Ex: you@domain.com</span>
               </div>
             </div>
-
             <div class="group">
               <label class="label">Password</label>
               <input type="password" class="text_field" />
-                <span class="description">Must contains the word 'yeah'</span>
+                <span class="description">Must contain the word 'yeah'</span>
             </div>
             <div class="group">
               <label class="label">Password confirmation</label>
@@ -813,7 +834,7 @@
             </div>
             <div class="group navform wat-cf">
               <button class="button" type="submit">
-                <img src="images/icons/tick.png" alt="Save" /> Signup
+                <img src="stylesheets/themes/activo/images/icons/tick.png" alt="Save" /> Signup
               </button>
             </div>
           </form>
