@@ -22,39 +22,12 @@
   <script type="text/javascript" src="javascripts/application.js"></script>
   <script type="text/javascript" src="javascripts/jquery.tipsy.js"></script>
   <script type="text/javascript" src="javascripts/jquery.uniform.min.js"></script>
-
-  <!-- Theme selector (based on the script of the web-app-theme demo page) -->
-  <script type="text/javascript"> 
-    // <![CDATA[
-    var Theme = {
-      activate: function(name) {
-        window.location.hash = 'themes/' + name
-        Theme.loadCurrent();
-      },
- 
-      loadCurrent: function() {
-        var hash = window.location.hash;
-        if (hash.length > 0) {
-          matches = hash.match(/^#themes\/([a-z0-9\-_]+)$/);
-          if (matches && matches.length > 1) {
-            $('#current-theme').attr('href', 'stylesheets/themes/' + matches[1] + '/style.css');
-            $("img").each(function (i) {
-              $(this).attr('src', $(this).attr('src').replace(/themes\/([a-z0-9\-_]+)/, '/themes/' + matches[1] + '/'));
-            });
-          } else {
-            alert('theme not valid');
-          }
-        }
-      }
-    }
-    // ]]>
-  </script>
 </head>
 
 <body>
   <div id="container">
     <div id="header">
-      <h1></h1>
+      <div class="logo"></div>
       <div id="user-navigation">
         <ul class="wat-cf">
           <li><a href="#"><img src="stylesheets/themes/activo/images/session/home.png"    title="Dashboard"   alt="Dashboard" /></a></li>
@@ -716,15 +689,8 @@
         </div>
       </div>
       <div id="sidebar">
-        <div class="block"> 
-          <h3>Switch style</h3> 
-          <ul class="navigation"> 
-            <li><a href="#" onclick="Theme.activate('activo'); return false;">Activo 2.0</a></li> 
-            <li><a href="#" onclick="Theme.activate('classic'); return false;">Classic</a></li> 
-          </ul> 
-        </div>
         <div class="block">
-          <h3>Examples</h3> 
+          <h3>Examples</h3>
           <ul class="navigation">
             <li><a class="anchor" href="#block-text">Text</a></li>
             <li><a class="anchor" href="#block-tables">Tables</a></li>
