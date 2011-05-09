@@ -42,9 +42,18 @@ p. Please email me at "hello@dmfranc.com":mailto:hello@dmfranc.com
 
 h2. Credits
 
-p. Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/ and "Evan Brooks":http://brsev.com/ - "Token icon set":http://brsev.deviantart.com/art/Token-128429570
+p. "Fugue iconset":http://code.google.com/p/fugue-icons-src/ - Icons by Yusuke Kamiyamane
 
-p. Buttons by "Particletree":http://particletree.com/ - "Rediscovering the Button Element":http://particletree.com/features/rediscovering-the-button-element/
+p. "Glyphish iconset":http://glyphish.com/ - Icons of the top-right corner
 
+p. "Gentleface Wireframe Toolbar Icons":http://gentleface.com/free_icon_set.html - Logout icon
+
+p. "Jquery Uniform":http://pixelmatrixdesign.com/uniform/ - Uniform look and feel of form elements between browsers
+
+p. "Museo font":http://www.josbuivenga.demon.nl/museo.html - Sans 500, Sans 500 Italic, 700
+
+p. "Raj Ramamurthy":http://mynameisraj.com/ - Made the dropdown menu and helped me with the buttons!
+
+p. "Andrea Franz":http://gravityblast.com/ - Author of the web-app-theme rails plugin
 
 p. 2010 David Francisco, released under the MIT license.
