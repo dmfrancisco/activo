@@ -5,7 +5,7 @@
     $("select, input:checkbox, input:radio, input:file").uniform();
 
     // jQuery datepicker for formtastic (http://gist.github.com/271377)
-    $('input.ui-datepicker').datepicker({ dateFormat: 'dd-mm-yy' });
+    $('input.ui-datepicker-input').datepicker({ dateFormat: 'dd-mm-yy' });
 
     // Tooltips (http://onehackoranother.com/projects/jquery/tipsy)
     $('img').each( function() {
