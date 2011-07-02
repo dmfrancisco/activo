@@ -164,6 +164,7 @@ form.formtastic fieldset > ol > li.radio fieldset ol li label {
   color: #222;
   font-size: 13px;
   font-weight: normal;
+	padding-left: 5px;
 }
 
 form.formtastic fieldset > ol > li.datepicker input {
@@ -188,6 +189,14 @@ form.formtastic fieldset > ol > li p.inline-hints {
 }
 
 /* BUTTON */
+form.formtastic fieldset.buttons {
+	padding-left: 0px;
+}
+
+form.formtastic fieldset.buttons li {
+	padding-right: 0px;
+}
+
 form.formtastic button.button, form.formtastic a.button {
   font-size: 12px;
 }
