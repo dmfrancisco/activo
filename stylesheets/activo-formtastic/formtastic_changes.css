@@ -198,6 +198,24 @@ form.formtastic button.button, form.formtastic a.button {
   width: 440px;
 }
 
+form.formtastic li.check_boxes {
+	list-style: none;
+	margin-bottom: .2em;
+}
+
+form.formtastic .choices legend {
+	margin-bottom: 10px;
+}
+
+form.formtastic fieldset > ol > li.choice {
+	padding-left: 5px;
+	margin-bottom: .2em;
+}
+
+form.formtastic fieldset > ol > li.choice input {
+	margin-right: 5px;
+}
+
 #box .block .content form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
   /* texto apresentado à frente de uma checkbox (nas boxes, por exemplo nos roles do editar perfil) */
   color: #222;
