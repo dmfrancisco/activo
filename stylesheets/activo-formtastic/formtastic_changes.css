@@ -164,6 +164,7 @@ form.formtastic fieldset > ol > li.radio fieldset ol li label {
   color: #222;
   font-size: 13px;
   font-weight: normal;
+	padding-left: 5px;
 }
 
 form.formtastic fieldset > ol > li.datepicker input {
@@ -188,6 +189,14 @@ form.formtastic fieldset > ol > li p.inline-hints {
 }
 
 /* BUTTON */
+form.formtastic fieldset.buttons {
+	padding-left: 0px;
+}
+
+form.formtastic fieldset.buttons li {
+	padding-right: 0px;
+}
+
 form.formtastic button.button, form.formtastic a.button {
   font-size: 12px;
 }
@@ -196,6 +205,24 @@ form.formtastic button.button, form.formtastic a.button {
 
 #box .block .content form.formtastic fieldset > ol > li.check_boxes fieldset ol {
   width: 440px;
+}
+
+form.formtastic li.check_boxes {
+	list-style: none;
+	margin-bottom: .2em;
+}
+
+form.formtastic .choices legend {
+	margin-bottom: 10px;
+}
+
+form.formtastic fieldset > ol > li.choice {
+	padding-left: 5px;
+	margin-bottom: .2em;
+}
+
+form.formtastic fieldset > ol > li.choice input {
+	margin-right: 5px;
 }
 
 #box .block .content form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
