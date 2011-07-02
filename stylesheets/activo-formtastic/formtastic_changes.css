@@ -1,9 +1,9 @@
 /*
     Stylesheet for formtastic
-    
+
     David Marquês Francisco
     (dfrancisc[at]gmail.com)
-    
+
     -------------------------------------
 */
 
@@ -12,7 +12,7 @@
 
 
 #main .block .content .inner form.formtastic {
-  padding-right: 7px;  
+  padding-right: 7px;
 }
 
 form.formtastic hr {
@@ -115,7 +115,7 @@ form.formtastic fieldset > ol > li.datepicker input:focus {
 form.formtastic fieldset > ol > li.string input[disabled='disabled'],
 form.formtastic fieldset > ol > li.password input[disabled='disabled'],
 form.formtastic fieldset > ol > li.numeric input[disabled='disabled'],
-form.formtastic fieldset > ol > li.text textarea[disabled='disabled'], 
+form.formtastic fieldset > ol > li.text textarea[disabled='disabled'],
 form.formtastic fieldset > ol > li.datepicker input[disabled='disabled'] {
   /* campos que não podem ser preenchidos (disabled) */
   background-color: #f6f6f6;
@@ -164,7 +164,7 @@ form.formtastic fieldset > ol > li.radio fieldset ol li label {
   color: #222;
   font-size: 13px;
   font-weight: normal;
-	padding-left: 5px;
+  padding-left: 5px;
 }
 
 form.formtastic fieldset > ol > li.datepicker input {
@@ -190,11 +190,11 @@ form.formtastic fieldset > ol > li p.inline-hints {
 
 /* BUTTON */
 form.formtastic fieldset.buttons {
-	padding-left: 0px;
+  padding-left: 0px;
 }
 
 form.formtastic fieldset.buttons li {
-	padding-right: 0px;
+  padding-right: 0px;
 }
 
 form.formtastic button.button, form.formtastic a.button {
@@ -208,21 +208,21 @@ form.formtastic button.button, form.formtastic a.button {
 }
 
 form.formtastic li.check_boxes {
-	list-style: none;
-	margin-bottom: .2em;
+  list-style: none;
+  margin-bottom: .2em;
 }
 
 form.formtastic .choices legend {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 form.formtastic fieldset > ol > li.choice {
-	padding-left: 5px;
-	margin-bottom: .2em;
+  padding-left: 5px;
+  margin-bottom: .2em;
 }
 
 form.formtastic fieldset > ol > li.choice input {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 
 #box .block .content form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
