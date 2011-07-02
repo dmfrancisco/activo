@@ -625,7 +625,7 @@
                 <fieldset class="inputs">
                   <hr />
                 </fieldset>
-                <fieldset class="inputs">
+                <fieldset class="inputs column_left">
                   <ol>
                     <li class="radio optional" id="example_state_input">
                     <fieldset>
@@ -637,16 +637,61 @@
                       </ol>
                     </fieldset>
                     </li>
+										
+										</ol></fieldset>
+
+										</li>
                   </ol>
                 </fieldset>
-                <div class="group navform wat-cf">
-                  <button class="button" type="submit">
-                    <img src="images/icons/tick.png" alt="Save" /> Save
-                  </button>
-                  <a href="#header" class="button">
-                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
-                  </a>
-                </div>
+
+								<fieldset class="inputs column_right">
+									<ol>									
+										<li class="check_boxes input required" id="habtm_input">
+											<fieldset class="choices">
+												<legend class="label">
+													<label>HABTM
+														<abbr title="required">*</abbr>
+													</label>
+												</legend>
+												<input id="habtm_none" name="model[habtm][]" type="hidden" value="">
+												<ol class="choices-group">
+													<li class="choice">
+														<label for="model_habtm_ids_1">
+															<input id="model_habtm_ids_1" name="model[habtm_ids][]" required="required" type="checkbox" value="1" checked>First
+														</label>
+													</li>
+													<li class="choice"><label for="model_habtm_ids_2">
+														<input id="model_habtm_ids_2" name="model[habtm_ids][]" required="required" type="checkbox" value="2">Second
+													</label>													
+												</li>
+											</ol>
+										</fieldset>
+									</li>
+								</ol>
+								</fieldset>
+								<hr />
+								<fieldset class="buttons">
+									<ol>		
+										<li class="commit button">
+											<input class="create" id="model_submit" name="commit" type="submit" value="Create Model">
+										</li>
+									</ol>
+								</fieldset>
+								<hr />
+								<fieldset class="buttons">
+									<ol>		
+										<li class="commit button">
+											<button class="button" type="submit">
+		                    <img src="images/icons/tick.png" alt="Save" /> Save
+		                  </button>
+										</li>
+										<li class="cancel button">
+											<a href="#header" class="button">
+		                    <img src="images/icons/cross.png" alt="Cancel"/> Cancel
+		                  </a>
+										</li>
+									</ol>
+								</fieldset>     
               </form>
             </div>
           </div>
