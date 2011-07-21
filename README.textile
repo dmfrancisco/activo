@@ -43,21 +43,21 @@ p. Please email me at "hello@dmfranc.com":mailto:hello@dmfranc.com
 
 h2. Contributors
 
-p. Jon Wood — "@jellybob":https://github.com/jellybob/
-p. Petteri Kääpä — "@kaapa":https://github.com/kaapa/
-p. Andrew P — "@standardtoaster":https://github.com/standardtoaster/
-p. Mirek Rusin — "@mirek":https://github.com/mirek/
+Jon Wood — "@jellybob":https://github.com/jellybob/ <br />
+Petteri Kääpä — "@kaapa":https://github.com/kaapa/ <br />
+Andrew P — "@standardtoaster":https://github.com/standardtoaster/ <br />
+Mirek Rusin — "@mirek":https://github.com/mirek/ <br />
 
 
 
 h2. Credits
 
-p. "Fugue iconset":http://code.google.com/p/fugue-icons-src/ — Icons by Yusuke Kamiyamane
-p. "Glyphish iconset":http://glyphish.com/ — Icons of the top-right corner
-p. "Gentleface Wireframe Toolbar Icons":http://gentleface.com/free_icon_set.html — Logout icon
-p. "Jquery Uniform":http://pixelmatrixdesign.com/uniform/ — Uniform look and feel of form elements between browsers
-p. "Museo font":http://www.josbuivenga.demon.nl/museo.html — Sans 500, Sans 500 Italic, 700
-p. "Raj Ramamurthy":http://mynameisraj.com/ — Made the dropdown menu and helped me with the buttons!
-p. "Andrea Franz":http://gravityblast.com/ — Author of the web-app-theme rails plugin
+"Fugue iconset":http://code.google.com/p/fugue-icons-src/ — Icons by Yusuke Kamiyamane <br />
+"Glyphish iconset":http://glyphish.com/ — Icons of the top-right corner <br />
+"Gentleface Wireframe Toolbar Icons":http://gentleface.com/free_icon_set.html — Logout icon <br />
+"Jquery Uniform":http://pixelmatrixdesign.com/uniform/ — Uniform look and feel of form elements between browsers <br />
+"Museo font":http://www.josbuivenga.demon.nl/museo.html — Sans 500, Sans 500 Italic, 700 <br />
+"Raj Ramamurthy":http://mynameisraj.com/ — Made the dropdown menu and helped me with the buttons! <br />
+"Andrea Franz":http://gravityblast.com/ — Author of the web-app-theme rails plugin <br />
 
 p. 2011 David Francisco, released under the MIT license.
