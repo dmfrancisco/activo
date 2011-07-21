@@ -44,7 +44,7 @@ h2. Contributors
 
 Jon Wood — "@jellybob":https://github.com/jellybob/ <br />
 Petteri Kääpä — "@kaapa":https://github.com/kaapa/ <br />
-Andrew P — "@standardtoaster":https://github.com/standardtoaster/ <br />
+Andrew Preece — "@standardtoaster":https://github.com/standardtoaster/ <br />
 Mirek Rusin — "@mirek":https://github.com/mirek/ <br />
 
 

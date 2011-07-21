@@ -23,9 +23,9 @@
 
   <script src="javascripts/textile.js"></script>
   <script language="javascript">
-    var filename = "README.textile" // Change the source file here
+    var filename = "README.textile"
 
-    function do_convert(html) {
+    function doConvert(html) {
       document.getElementById('preview').innerHTML = convert(html);
     }
 
@@ -47,7 +47,7 @@
 
     function updateNewContent() {
       if (http.readyState == 4)
-        do_convert(http.responseText);
+        doConvert(http.responseText);
     }
 
     getNewContent();
