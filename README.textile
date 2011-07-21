@@ -40,11 +40,18 @@ h2. Contact information
 p. Please email me at "dmfrancisc@gmail.com":mailto:dmfrancisc@gmail.com
 
 
+h2. Contributors
+
+Jon Wood — "@jellybob":https://github.com/jellybob/ <br />
+Petteri Kääpä — "@kaapa":https://github.com/kaapa/ <br />
+Andrew P — "@standardtoaster":https://github.com/standardtoaster/ <br />
+Mirek Rusin — "@mirek":https://github.com/mirek/ <br />
+
+
 h2. Credits
 
-p. Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/ and "Evan Brooks":http://brsev.com/ - "Token icon set":http://brsev.deviantart.com/art/Token-128429570
-
-p. Buttons by "Particletree":http://particletree.com/ - "Rediscovering the Button Element":http://particletree.com/features/rediscovering-the-button-element/
+Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/ and "Evan Brooks":http://brsev.com/ - "Token icon set":http://brsev.deviantart.com/art/Token-128429570 <br />
+Buttons by "Particletree":http://particletree.com/ - "Rediscovering the Button Element":http://particletree.com/features/rediscovering-the-button-element/ <br />
 
 
 p. 2010 David Francisco, released under the MIT license.
