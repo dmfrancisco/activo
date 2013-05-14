@@ -1,4 +1,4 @@
-h1. Activo is a customizable theme for your web application
+h2. Activo is a customizable theme for your web application
 
 p. _Be sure to also check the "activo-2 branch":https://github.com/dmfrancisco/activo/tree/activo-2_
 
@@ -14,7 +14,7 @@ p. * "Formtastic":http://github.com/justinfrench/formtastic makes it easier to c
 p. * "Attrtastic":http://github.com/MBO/attrtastic is similar in usage to formtastic and allows to easily display AR record information. It helps in the creation of show and index pages.
 
 
-h2. Main contents
+h3. Main contents
 
 
 p. +stylesheets+
@@ -35,12 +35,12 @@ p. +stylesheets+
 ** +formtastic_changes.css+: Stylesheet of the theme for the formtastic plugin.
 
 
-h2. Contact information
+h3. Contact information
 
 p. Please email me at "dmfrancisc@gmail.com":mailto:dmfrancisc@gmail.com
 
 
-h2. Contributors
+h3. Contributors
 
 Jon Wood — "@jellybob":https://github.com/jellybob/ <br />
 Petteri Kääpä — "@kaapa":https://github.com/kaapa/ <br />
@@ -48,7 +48,7 @@ Andrew Preece — "@standardtoaster":https://github.com/standardtoaster/ <br />
 Mirek Rusin — "@mirek":https://github.com/mirek/ <br />
 
 
-h2. Credits
+h3. Credits
 
 Icons by "Yusuke Kamiyamane":http://yusukekamiyamane.com/ - "Fugue icons":http://code.google.com/p/fugue-icons-src/ and "Evan Brooks":http://brsev.com/ - "Token icon set":http://brsev.deviantart.com/art/Token-128429570 <br />
 Buttons by "Particletree":http://particletree.com/ - "Rediscovering the Button Element":http://particletree.com/features/rediscovering-the-button-element/ <br />
