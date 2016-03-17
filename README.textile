@@ -1,3 +1,5 @@
+"!http://unmaintained.tech/badge.svg(No Maintenance Intended)!":http://unmaintained.tech/
+
 h2. Activo is a customizable theme for your web application
 
 p. _Be sure to also check the "activo-2 branch":https://github.com/dmfrancisco/activo/tree/activo-2_
